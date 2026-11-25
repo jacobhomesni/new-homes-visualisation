@@ -335,10 +335,84 @@
     }
   }
 
-  async function loadCounties() {
+  function countyDisplayName(raw) {
+    const name = String(raw || '').trim();
+    if (/^londonderry$/i.test(name)) return 'Derry/Londonderry';
+    return name;
+  }
+
+  function pointInRing(lng, lat, ring) {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const xi = Number(ring[i][0]);
+      const yi = Number(ring[i][1]);
+      const xj = Number(ring[j][0]);
+      const yj = Number(ring[j][1]);
+      const intersect = ((yi > lat) !== (yj > lat))
+        && (lng < ((xj - xi) * (lat - yi)) / ((yj - yi) || Number.EPSILON) + xi);
+      if (intersect) inside = !inside;
+    }
+    return inside;
+  }
+
+  function pointInFeature(lng, lat, feature) {
+    const geom = feature?.geometry;
+    if (!geom) return false;
+    if (geom.type === 'Polygon') {
+      const rings = geom.coordinates || [];
+      if (!rings.length || !pointInRing(lng, lat, rings[0])) return false;
+      for (let i = 1; i < rings.length; i++) {
+        if (pointInRing(lng, lat, rings[i])) return false;
+      }
+      return true;
+    }
+    if (geom.type === 'MultiPolygon') {
+      for (const poly of geom.coordinates || []) {
+        if (!poly?.length || !pointInRing(lng, lat, poly[0])) continue;
+        let inHole = false;
+        for (let i = 1; i < poly.length; i++) {
+          if (pointInRing(lng, lat, poly[i])) {
+            inHole = true;
+            break;
+          }
+        }
+        if (!inHole) return true;
+      }
+    }
+    return false;
+  }
+
+  function tallyCountyStats(geo, developments) {
+    const rows = (geo.features || []).map((feature) => ({
+      feature,
+      name: countyDisplayName(feature.properties?.name),
+      count: 0,
+      available: 0,
+    }));
+    for (const d of developments || []) {
+      const lat = Number(d.lat);
+      const lng = Number(d.lng);
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+      const hit = rows.find((row) => pointInFeature(lng, lat, row.feature));
+      if (!hit) continue;
+      hit.count += 1;
+      hit.available += Number(d.homesAvailable) || 0;
+    }
+    return rows;
+  }
+
+  function countyLabelHtml(name, count, available) {
+    return `<div class="county-label-text">
+      <div class="county-label-name">${escapeHtml(name)}</div>
+      <div class="county-label-meta">(${count} developments, ${available} available)</div>
+    </div>`;
+  }
+
+  async function loadCounties(developments) {
     try {
       const res = await fetch('data/ni-counties.geojson');
       const geo = await res.json();
+      const stats = tallyCountyStats(geo, developments);
 
       // Green counties + dark green drop-shadow only (no hard underlay / thick rim)
       L.geoJSON(geo, {
@@ -352,9 +426,9 @@
           lineJoin: 'round',
         },
         onEachFeature(feature, layer) {
-          let name = feature.properties?.name;
+          const name = countyDisplayName(feature.properties?.name);
           if (!name) return;
-          if (/^londonderry$/i.test(name)) name = 'Derry/Londonderry';
+          const row = stats.find((s) => s.name === name) || { count: 0, available: 0 };
           const latlng = countyLabelLatLng(feature, layer);
           if (!latlng) return;
           L.tooltip({
@@ -363,7 +437,7 @@
             className: 'county-label',
             opacity: 0.95,
           })
-            .setContent(name)
+            .setContent(countyLabelHtml(name, row.count, row.available))
             .setLatLng(latlng)
             .addTo(map);
         },
@@ -375,10 +449,11 @@
 
   async function boot() {
     state.layer = L.layerGroup().addTo(map);
-    await loadCounties();
 
     const res = await fetch(`data/developments.json?v=${Date.now()}`);
     state.data = await res.json();
+    await loadCounties(state.data.developments || []);
+
     fillStatusOptions(state.data.developments || []);
     renderTallies(els.paneAgents, state.data.agentTallies, 'agent');
     renderTallies(els.paneDevelopers, state.data.developerTallies, 'developer');
