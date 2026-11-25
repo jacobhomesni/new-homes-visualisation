@@ -1,6 +1,8 @@
-# NI New Homes Map
+# New Homes Visualisation
 
-GitHub Pages dashboard for the Northern Ireland new-developments audit export.
+GitHub Pages site: https://jacobhomesni.github.io/new-homes-visualisation/
+
+Dashboard for the Northern Ireland new-developments audit export.
 
 - Map of Northern Ireland with county outlines (OSNI Open Data, OGL)
 - Pinpoints for each development (town / postcode geocoding from audit addresses)
