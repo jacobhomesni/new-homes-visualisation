@@ -77,7 +77,7 @@
 
   function markerIcon(redundant) {
     const color = redundant ? '#a13d2d' : '#1f7a4c';
-    const size = isMobile() ? 18 : 14;
+    const size = isMobile() ? 10 : 14;
     const half = size / 2;
     return L.divIcon({
       className: 'dev-marker',
