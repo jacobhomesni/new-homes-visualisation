@@ -2,21 +2,33 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6eb5e0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <title>NI New Homes Map</title>
   <meta name="description" content="Map and dashboard of Northern Ireland new-build developments." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <link rel="stylesheet" href="assets/style.css?v=20261125c" />
+  <link rel="stylesheet" href="assets/style.css?v=20261125n" />
 </head>
 <body>
   <div class="app">
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
+      <div class="sheet-grab" id="sheet-grab" aria-hidden="true">
+        <span class="sheet-handle"></span>
+      </div>
+
       <header class="brand">
-        <p class="eyebrow">Northern Ireland · new builds</p>
-        <h1>New Homes Map</h1>
+        <div class="brand-row">
+          <div>
+            <p class="eyebrow">Northern Ireland · new builds</p>
+            <h1>New Homes Map</h1>
+          </div>
+          <button type="button" class="sheet-close" id="sheet-close" aria-label="Close browse panel">Close</button>
+        </div>
         <p class="lede">268 developments across Northern Ireland — explore by map, agent, or developer.</p>
       </header>
 
@@ -30,7 +42,7 @@
       <div class="controls">
         <label class="field">
           <span>Search</span>
-          <input type="search" id="q" placeholder="Name, town, agent, developer…" autocomplete="off" />
+          <input type="search" id="q" placeholder="Name, town, agent, developer…" autocomplete="off" enterkeyhint="search" />
         </label>
         <label class="field">
           <span>Status</span>
@@ -66,6 +78,8 @@
       </footer>
     </aside>
 
+    <button type="button" class="sheet-backdrop" id="sheet-backdrop" aria-label="Dismiss browse panel" hidden></button>
+
     <main class="map-wrap">
       <div id="map" role="application" aria-label="Northern Ireland new developments map"></div>
       <div class="map-legend">
@@ -73,10 +87,13 @@
         <span><i class="dot dead"></i> Redundant / sale agreed</span>
         <span class="hint">OSNI counties</span>
       </div>
+      <button type="button" class="browse-fab" id="browse-fab" aria-expanded="false" aria-controls="sidebar">
+        Browse list
+      </button>
     </main>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="assets/app.js?v=20261125c"></script>
+  <script src="assets/app.js?v=20261125n"></script>
 </body>
 </html>

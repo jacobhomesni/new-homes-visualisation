@@ -9,6 +9,7 @@
   };
 
   const els = {
+    app: document.querySelector('.app'),
     statsTotal: document.getElementById('stat-total'),
     statsHomes: document.getElementById('stat-homes'),
     statsRedundant: document.getElementById('stat-redundant'),
@@ -20,13 +21,52 @@
     paneAgents: document.getElementById('pane-agents'),
     paneDevelopers: document.getElementById('pane-developers'),
     meta: document.getElementById('meta'),
+    browseFab: document.getElementById('browse-fab'),
+    sheetClose: document.getElementById('sheet-close'),
+    sheetBackdrop: document.getElementById('sheet-backdrop'),
+    sheetGrab: document.getElementById('sheet-grab'),
   };
+
+  const mqMobile = window.matchMedia('(max-width: 860px)');
+
+  function isMobile() {
+    return mqMobile.matches;
+  }
+
+  function setSheetOpen(open) {
+    if (!els.app) return;
+    els.app.classList.toggle('sheet-open', !!open);
+    if (els.browseFab) els.browseFab.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (els.sheetBackdrop) els.sheetBackdrop.hidden = !open;
+    if (open) {
+      document.documentElement.style.overflow = isMobile() ? 'hidden' : '';
+    } else {
+      document.documentElement.style.overflow = '';
+    }
+    requestAnimationFrame(() => {
+      map.invalidateSize({ animate: false });
+    });
+  }
+
+  function popupOptions() {
+    if (isMobile()) {
+      const w = Math.min(300, Math.max(220, window.innerWidth - 48));
+      return {
+        maxWidth: w,
+        minWidth: Math.min(200, w - 20),
+        autoPanPadding: [16, 72],
+        keepInView: true,
+      };
+    }
+    return { maxWidth: 320, minWidth: 220, autoPanPadding: [24, 24] };
+  }
 
   const map = L.map('map', {
     zoomControl: true,
     minZoom: 7,
     maxZoom: 14,
     attributionControl: true,
+    tapTolerance: 22,
   }).setView([54.6, -6.5], 8);
 
   // Ocean backdrop — no basemap tiles / API keys
@@ -37,12 +77,14 @@
 
   function markerIcon(redundant) {
     const color = redundant ? '#a13d2d' : '#1f7a4c';
+    const size = isMobile() ? 18 : 14;
+    const half = size / 2;
     return L.divIcon({
-      className: '',
-      html: `<span style="display:block;width:14px;height:14px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 2px 6px rgba(10,30,18,.45), 0 1px 0 rgba(255,255,255,.35) inset"></span>`,
-      iconSize: [14, 14],
-      iconAnchor: [7, 7],
-      popupAnchor: [0, -8],
+      className: 'dev-marker',
+      html: `<span style="display:block;width:${size}px;height:${size}px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 2px 6px rgba(10,30,18,.45), 0 1px 0 rgba(255,255,255,.35) inset"></span>`,
+      iconSize: [size, size],
+      iconAnchor: [half, half],
+      popupAnchor: [0, -half - 2],
     });
   }
 
@@ -204,10 +246,13 @@
       let marker = state.markers.get(d.pathId);
       if (!marker) {
         marker = L.marker([d.lat, d.lng], { icon: markerIcon(!!d.redundant) });
-        marker.bindPopup(() => popupHtml(d), { maxWidth: 320, minWidth: 220, autoPanPadding: [24, 24] });
+        marker.bindPopup(() => popupHtml(d), popupOptions());
         marker.on('click', () => selectDev(d.pathId, false));
         state.layer.addLayer(marker);
         state.markers.set(d.pathId, marker);
+      } else {
+        marker.setIcon(markerIcon(!!d.redundant));
+        marker.setPopupContent(() => popupHtml(d));
       }
     }
   }
@@ -218,8 +263,12 @@
     renderList(filtered());
     const marker = state.markers.get(pathId);
     if (marker) {
+      if (isMobile()) setSheetOpen(false);
       marker.openPopup();
-      if (pan && d && d.lat != null) map.panTo([d.lat, d.lng], { animate: true });
+      if (pan && d && d.lat != null) {
+        map.setView([d.lat, d.lng], Math.max(map.getZoom(), isMobile() ? 10 : 9), { animate: true });
+      }
+      requestAnimationFrame(() => map.invalidateSize({ animate: false }));
     }
   }
 
@@ -371,8 +420,44 @@
     const mapped = (state.data.developments || []).filter((d) => d.lat != null);
     if (mapped.length) {
       const bounds = L.latLngBounds(mapped.map((d) => [d.lat, d.lng]));
-      map.fitBounds(bounds.pad(0.08));
+      map.fitBounds(bounds.pad(isMobile() ? 0.04 : 0.08));
     }
+    map.invalidateSize({ animate: false });
+  }
+
+  function bindSheetUi() {
+    els.browseFab?.addEventListener('click', () => setSheetOpen(true));
+    els.sheetClose?.addEventListener('click', () => setSheetOpen(false));
+    els.sheetBackdrop?.addEventListener('click', () => setSheetOpen(false));
+
+    let startY = 0;
+    let dragging = false;
+    els.sheetGrab?.addEventListener('touchstart', (e) => {
+      if (!isMobile()) return;
+      dragging = true;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+    els.sheetGrab?.addEventListener('touchend', (e) => {
+      if (!dragging) return;
+      dragging = false;
+      const endY = e.changedTouches[0]?.clientY ?? startY;
+      if (endY - startY > 60) setSheetOpen(false);
+    }, { passive: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setSheetOpen(false);
+    });
+  }
+
+  function onViewportChange() {
+    if (!isMobile()) setSheetOpen(false);
+    for (const d of state.data?.developments || []) {
+      const marker = state.markers.get(d.pathId);
+      if (!marker) continue;
+      marker.setIcon(markerIcon(!!d.redundant));
+      marker.setPopupContent(() => popupHtml(d));
+    }
+    map.invalidateSize({ animate: false });
   }
 
   els.q.addEventListener('input', refresh);
@@ -383,6 +468,16 @@
     const card = e.target.closest('.card[data-id]');
     if (!card) return;
     selectDev(card.dataset.id, true);
+  });
+
+  bindSheetUi();
+  mqMobile.addEventListener?.('change', onViewportChange);
+  window.addEventListener('resize', () => {
+    clearTimeout(onViewportChange._t);
+    onViewportChange._t = setTimeout(onViewportChange, 120);
+  });
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => map.invalidateSize({ animate: false }), 250);
   });
 
   boot().catch((err) => {
