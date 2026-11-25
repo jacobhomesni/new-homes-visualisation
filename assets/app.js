@@ -217,17 +217,18 @@
           color: '#ffffff',
           weight: 1.6,
           opacity: 1,
-          fillColor: '#ffffff',
-          fillOpacity: 0.96,
+          fillColor: '#4f8f58',
+          fillOpacity: 0.92,
         },
         onEachFeature(feature, layer) {
-          const name = feature.properties?.name;
+          let name = feature.properties?.name;
           if (!name) return;
+          if (/^londonderry$/i.test(name)) name = 'Derry/Londonderry';
           layer.bindTooltip(name, {
             permanent: true,
             direction: 'center',
             className: 'county-label',
-            opacity: 0.9,
+            opacity: 0.95,
           });
         },
       }).addTo(map);
