@@ -397,26 +397,14 @@ body {
 }
 .popup a:hover { text-decoration: underline; }
 
-.county-poly-shadow {
-  filter: drop-shadow(0 8px 14px rgba(8, 28, 18, 0.48));
-}
-.leaflet-overlay-pane svg path.county-poly-shadow {
-  fill: #245530;
-  stroke: #1a3f24;
-  stroke-linejoin: round;
+.county-poly {
+  filter: drop-shadow(0 6px 10px rgba(20, 70, 35, 0.55));
 }
 .leaflet-overlay-pane svg path.county-poly {
   fill: #4f8f58;
-  stroke: #1f4a2c;
-  stroke-width: 8;
-  stroke-linejoin: round;
-  /* Stroke after fill = dark rim visible inside each county */
-  paint-order: fill stroke;
-}
-.leaflet-overlay-pane svg path.county-poly-line {
-  fill: none !important;
   stroke: #ffffff;
-  stroke-width: 1.4;
+  stroke-width: 1.2;
+  stroke-opacity: 0.85;
   stroke-linejoin: round;
 }
 
@@ -665,9 +653,6 @@ body {
   .county-label {
     font-size: 9px;
     letter-spacing: 0.04em;
-  }
-  .leaflet-overlay-pane svg path.county-poly {
-    stroke-width: 5;
   }
 }
 

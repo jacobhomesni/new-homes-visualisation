@@ -341,35 +341,18 @@
       const res = await fetch('data/ni-counties.geojson');
       const geo = await res.json();
 
-      // Soft land-mass shadow over the ocean
-      L.geoJSON(geo, {
-        interactive: false,
-        style: {
-          color: '#1a3f24',
-          weight: 2,
-          opacity: 1,
-          fillColor: '#245530',
-          fillOpacity: 1,
-          className: 'county-poly-shadow',
-        },
-      }).addTo(map);
-
-      // Light green fill + dark stroke drawn on top (inner rim inside each county)
+      // Green counties + dark green drop-shadow only (no hard underlay / thick rim)
       L.geoJSON(geo, {
         style: {
-          color: '#1f4a2c',
-          weight: 8,
-          opacity: 1,
+          color: '#ffffff',
+          weight: 1.2,
+          opacity: 0.85,
           fillColor: '#4f8f58',
           fillOpacity: 1,
           className: 'county-poly',
           lineJoin: 'round',
         },
         onEachFeature(feature, layer) {
-          // paint-order must be set on the SVG path after Leaflet creates it
-          const el = layer.getElement?.() || layer._path;
-          if (el) el.setAttribute('paint-order', 'fill stroke');
-
           let name = feature.properties?.name;
           if (!name) return;
           if (/^londonderry$/i.test(name)) name = 'Derry/Londonderry';
@@ -384,20 +367,6 @@
             .setContent(name)
             .setLatLng(latlng)
             .addTo(map);
-        },
-      }).addTo(map);
-
-      // White county border hairline on top
-      L.geoJSON(geo, {
-        interactive: false,
-        style: {
-          color: '#ffffff',
-          weight: 1.4,
-          opacity: 1,
-          fill: false,
-          fillOpacity: 0,
-          className: 'county-poly-line',
-          lineJoin: 'round',
         },
       }).addTo(map);
     } catch (err) {
