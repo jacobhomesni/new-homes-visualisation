@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NI New Homes Map — PropertyPal Audit</title>
+  <meta name="description" content="Map and dashboard of Northern Ireland new developments from the PropertyPal audit export." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <header class="brand">
+        <p class="eyebrow">Homes NI · PropertyPal audit</p>
+        <h1>New Homes Map</h1>
+        <p class="lede">268 developments across Northern Ireland — explore by map, agent, or developer.</p>
+      </header>
+
+      <div class="stats" id="stats">
+        <div class="stat"><span class="stat-value" id="stat-total">—</span><span class="stat-label">Developments</span></div>
+        <div class="stat"><span class="stat-value" id="stat-homes">—</span><span class="stat-label">Homes available</span></div>
+        <div class="stat"><span class="stat-value" id="stat-redundant">—</span><span class="stat-label">Redundant</span></div>
+        <div class="stat"><span class="stat-value" id="stat-agents">—</span><span class="stat-label">Agents</span></div>
+      </div>
+
+      <div class="controls">
+        <label class="field">
+          <span>Search</span>
+          <input type="search" id="q" placeholder="Name, town, agent, developer…" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Status</span>
+          <select id="status">
+            <option value="">All statuses</option>
+          </select>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="hide-redundant" />
+          Hide sale agreed / redundant
+        </label>
+      </div>
+
+      <nav class="tabs" role="tablist">
+        <button type="button" class="tab active" data-tab="list">List</button>
+        <button type="button" class="tab" data-tab="agents">Agents</button>
+        <button type="button" class="tab" data-tab="developers">Developers</button>
+      </nav>
+
+      <div class="pane active" id="pane-list"></div>
+      <div class="pane" id="pane-agents"></div>
+      <div class="pane" id="pane-developers"></div>
+
+      <footer class="foot">
+        <span id="meta"></span>
+      </footer>
+    </aside>
+
+    <main class="map-wrap">
+      <div id="map" role="application" aria-label="Northern Ireland new developments map"></div>
+      <div class="map-legend">
+        <span><i class="dot live"></i> Available</span>
+        <span><i class="dot dead"></i> Redundant / sale agreed</span>
+        <span class="hint">County outlines · OpenStreetMap</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
