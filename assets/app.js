@@ -56,7 +56,14 @@
     }
   }
 
+  function isAnonymousDeveloper(name) {
+    return /^(multiple\s+developers|private\s+developer|undisclosed\s+developer)$/i.test(String(name || '').trim());
+  }
+
   function logoImg(src, name, className = 'org-logo') {
+    if (isAnonymousDeveloper(name)) {
+      return `<span class="${className} placeholder" aria-hidden="true"></span>`;
+    }
     const href = resolveAsset(src);
     if (!href) return `<span class="${className} placeholder" aria-hidden="true"></span>`;
     return `<img class="${className}" src="${escapeAttr(href)}" alt="${escapeAttr(name || 'Logo')}" decoding="async" />`;
@@ -70,7 +77,7 @@
     }
     return `<div class="org-row">${items.map((o) => {
       const name = o.name || '';
-      const src = o.image || o.url || '';
+      const src = isAnonymousDeveloper(name) ? '' : (o.image || o.url || '');
       return `<div class="org-card">${logoImg(src, name)}<span class="org-name">${escapeHtml(name || '—')}</span></div>`;
     }).join('')}</div>`;
   }
@@ -79,7 +86,7 @@
     const map = new Map();
     for (const d of state.data?.developments || []) {
       for (const o of [...(d.agentOrgs || []), ...(d.developerOrgs || [])]) {
-        if (!o?.name || !o.image) continue;
+        if (!o?.name || !o.image || isAnonymousDeveloper(o.name)) continue;
         const key = String(o.name).trim().toLowerCase();
         if (key && !map.has(key)) map.set(key, o.image);
       }
@@ -353,7 +360,7 @@
     state.layer = L.layerGroup().addTo(map);
     await loadCounties();
 
-    const res = await fetch('data/developments.json');
+    const res = await fetch(`data/developments.json?v=${Date.now()}`);
     state.data = await res.json();
     fillStatusOptions(state.data.developments || []);
     renderTallies(els.paneAgents, state.data.agentTallies, 'agent');

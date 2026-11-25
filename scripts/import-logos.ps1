@@ -35,6 +35,11 @@ function SplitNames([string]$raw) {
   return @($raw -split ';' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
 }
 
+function IsAnonymousDeveloper([string]$orgName) {
+  # PropertyPal placeholder labels often ship with the PP logo — never wire those images
+  return [bool]($orgName -match '^(?i)(multiple\s+developers|private\s+developer|undisclosed\s+developer)$')
+}
+
 function BestKey([string]$fileLabel, [string[]]$candidates) {
   $fileNorm = NormName $fileLabel
   if (-not $fileNorm) { return $null }
@@ -75,6 +80,7 @@ Get-ChildItem -LiteralPath $srcRoot -Directory | ForEach-Object {
     $label = NameFromLogoFile $_.Name
     $key = NormName $label
     if (-not $key) { return }
+    if ($role -eq 'developer' -and (IsAnonymousDeveloper $label)) { return }
     if (-not $logoIndex[$role].ContainsKey($key)) {
       $ext = $_.Extension.ToLowerInvariant()
       if ($ext -eq '.jpeg') { $ext = '.jpg' }
@@ -98,6 +104,7 @@ $outDevs = New-Object System.Collections.Generic.List[object]
 $withLogos = 0
 
 function FindLogo([string]$role, [string]$orgName) {
+  if ($role -eq 'developer' -and (IsAnonymousDeveloper $orgName)) { return '' }
   $key = NormName $orgName
   if ($key -and $logoIndex[$role].ContainsKey($key)) {
     return $logoIndex[$role][$key].image
