@@ -71,7 +71,7 @@
 
   // Ocean backdrop — no basemap tiles / API keys
   map.getContainer().style.background =
-    'radial-gradient(120% 90% at 50% 35%, #8ec8ea 0%, #6eb5e0 42%, #4f9dcb 100%)';
+    'radial-gradient(120% 90% at 50% 35%, #3d7eb8 0%, #2a5f96 42%, #1a3f6e 100%)';
   map.attributionControl.setPrefix(false);
   map.attributionControl.addAttribution('County boundaries OSNI (OGL)');
 
