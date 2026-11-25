@@ -399,8 +399,8 @@ body {
 
 .county-poly {
   filter:
-    drop-shadow(0 10px 18px rgba(12, 48, 28, 0.72))
-    drop-shadow(0 4px 8px rgba(8, 36, 20, 0.55));
+    drop-shadow(0 5px 9px rgba(12, 48, 28, 0.55))
+    drop-shadow(0 2px 4px rgba(8, 36, 20, 0.4));
 }
 .leaflet-overlay-pane svg path.county-poly {
   fill: #4f8f58;
