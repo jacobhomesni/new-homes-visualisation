@@ -59,6 +59,11 @@ foreach ($g in $geo.developments) {
   $agentOrgs = @()
   if ($g.agentOrgs) { $agentOrgs = @($g.agentOrgs) }
 
+  # Prefer audit Excel flag; fall back to existing geo value.
+  $hasMicrosite = $false
+  if ($src -and $null -ne $src.hasMicrosite) { $hasMicrosite = [bool]$src.hasMicrosite }
+  elseif ($null -ne $g.hasMicrosite) { $hasMicrosite = [bool]$g.hasMicrosite }
+
   [void]$out.Add([ordered]@{
       pathId         = $g.pathId
       name           = $name
@@ -66,6 +71,7 @@ foreach ($g in $geo.developments) {
       status         = CleanText ([string]$g.status)
       homesAvailable = $g.homesAvailable
       redundant      = [bool]$g.redundant
+      hasMicrosite   = $hasMicrosite
       price          = (FixPrice $priceRaw)
       developers     = CleanText ([string]$(if ($src) { $src.developers } else { $g.developers }))
       developerOrgs  = $devOrgs

@@ -40,7 +40,14 @@ $pairs = @(
   @('downpatrick', 54.329, -5.715),
   @('newcastle', 54.215, -5.89),
   @('holywood', 54.639, -5.821),
+  @('cultra', 54.649, -5.811),
   @('dundonald', 54.592, -5.81),
+  @('mallusk', 54.678, -6.0),
+  @('dunadry', 54.656, -6.148),
+  @('connor', 54.814, -6.208),
+  @('lisnarick', 54.478, -7.703),
+  @('fivemiletown', 54.38, -7.307),
+  @('clogher', 54.411, -7.198),
   @('carryduff', 54.534, -5.887),
   @('comber', 54.549, -5.744),
   @('ballynahinch', 54.403, -5.895),
@@ -334,7 +341,7 @@ foreach ($d in $audit.developments) {
     $jitterLng = ((([int]($h / 100)) % 100) - 50) / 12000.0
   }
 
-  [void]$geo.Add([pscustomobject]@{
+  $row = [ordered]@{
       pathId         = $d.pathId
       name           = (([string]$d.name) -replace '^"|"$', '')
       address        = (([string]$d.address) -replace '^"|"$', '')
@@ -348,7 +355,9 @@ foreach ($d in $audit.developments) {
       town           = $matched
       lat            = if ($null -ne $lat) { [math]::Round($lat + $jitterLat, 6) } else { $null }
       lng            = if ($null -ne $lng) { [math]::Round($lng + $jitterLng, 6) } else { $null }
-    })
+  }
+  if ($null -ne $d.hasMicrosite) { $row.hasMicrosite = [bool]$d.hasMicrosite }
+  [void]$geo.Add([pscustomobject]$row)
 }
 
 Write-Host "geocoded=$(@($geo | Where-Object { $_.lat }).Count)/$($geo.Count) missed=$($miss.Count)"

@@ -15,6 +15,7 @@
     statsRedundant: document.getElementById('stat-redundant'),
     statsAgents: document.getElementById('stat-agents'),
     q: document.getElementById('q'),
+    filterMicrosite: document.getElementById('filter-microsite'),
     status: document.getElementById('status'),
     hideRedundant: document.getElementById('hide-redundant'),
     paneList: document.getElementById('pane-list'),
@@ -75,12 +76,15 @@
   map.attributionControl.setPrefix(false);
   map.attributionControl.addAttribution('County boundaries OSNI (OGL)');
 
-  function markerIcon(redundant) {
-    const color = redundant ? '#a13d2d' : '#1f7a4c';
+  function markerIcon(dev) {
+    const redundant = !!(dev && dev.redundant);
+    const microsite = !!(dev && dev.hasMicrosite);
+    // Redundant stays red; microsites get gold; otherwise live green.
+    const color = redundant ? '#a13d2d' : (microsite ? '#c9a227' : '#1f7a4c');
     const size = isMobile() ? 10 : 14;
     const half = size / 2;
     return L.divIcon({
-      className: 'dev-marker',
+      className: 'dev-marker' + (microsite && !redundant ? ' dev-marker-microsite' : ''),
       html: `<span style="display:block;width:${size}px;height:${size}px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 2px 6px rgba(10,30,18,.45), 0 1px 0 rgba(255,255,255,.35) inset"></span>`,
       iconSize: [size, size],
       iconAnchor: [half, half],
@@ -172,8 +176,10 @@
     const q = (els.q.value || '').trim().toLowerCase();
     const status = els.status.value;
     const hideRedundant = els.hideRedundant.checked;
+    const micrositeOnly = !!(els.filterMicrosite && els.filterMicrosite.checked);
     return (state.data.developments || []).filter((d) => {
       if (hideRedundant && d.redundant) return false;
+      if (micrositeOnly && !d.hasMicrosite) return false;
       if (status && String(d.status || '') !== status) return false;
       if (!q) return true;
       const hay = [d.name, d.address, d.town, d.agents, d.developers, d.status, d.pathId]
@@ -244,13 +250,13 @@
       if (d.lat == null || d.lng == null) continue;
       let marker = state.markers.get(d.pathId);
       if (!marker) {
-        marker = L.marker([d.lat, d.lng], { icon: markerIcon(!!d.redundant) });
+        marker = L.marker([d.lat, d.lng], { icon: markerIcon(d) });
         marker.bindPopup(() => popupHtml(d), popupOptions());
         marker.on('click', () => selectDev(d.pathId, false));
         state.layer.addLayer(marker);
         state.markers.set(d.pathId, marker);
       } else {
-        marker.setIcon(markerIcon(!!d.redundant));
+        marker.setIcon(markerIcon(d));
         marker.setPopupContent(() => popupHtml(d));
       }
     }
@@ -516,13 +522,14 @@
     for (const d of state.data?.developments || []) {
       const marker = state.markers.get(d.pathId);
       if (!marker) continue;
-      marker.setIcon(markerIcon(!!d.redundant));
+      marker.setIcon(markerIcon(d));
       marker.setPopupContent(() => popupHtml(d));
     }
     map.invalidateSize({ animate: false });
   }
 
   els.q.addEventListener('input', refresh);
+  els.filterMicrosite?.addEventListener('change', refresh);
   els.status.addEventListener('change', refresh);
   els.hideRedundant.addEventListener('change', refresh);
 

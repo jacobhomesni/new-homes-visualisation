@@ -140,7 +140,7 @@ foreach ($d in $raw.developments) {
 
   if (@($developerOrgs + $agentOrgs | Where-Object { $_.image }).Count -gt 0) { $withLogos++ }
 
-  [void]$outDevs.Add([ordered]@{
+  $row = [ordered]@{
       pathId         = $d.pathId
       name           = $d.name
       address        = $d.address
@@ -156,7 +156,9 @@ foreach ($d in $raw.developments) {
       town           = $d.town
       lat            = $d.lat
       lng            = $d.lng
-    })
+  }
+  if ($null -ne $d.hasMicrosite) { $row.hasMicrosite = [bool]$d.hasMicrosite }
+  [void]$outDevs.Add($row)
 }
 
 $payload = [ordered]@{
