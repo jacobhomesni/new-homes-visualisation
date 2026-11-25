@@ -46,6 +46,22 @@
     });
   }
 
+  function resolveAsset(src) {
+    const raw = String(src || '').trim();
+    if (!raw) return '';
+    try {
+      return new URL(raw, document.baseURI).href;
+    } catch (_) {
+      return raw;
+    }
+  }
+
+  function logoImg(src, name, className = 'org-logo') {
+    const href = resolveAsset(src);
+    if (!href) return `<span class="${className} placeholder" aria-hidden="true"></span>`;
+    return `<img class="${className}" src="${escapeAttr(href)}" alt="${escapeAttr(name || 'Logo')}" decoding="async" />`;
+  }
+
   function orgCards(list, fallbackName) {
     const items = Array.isArray(list) ? list.filter((x) => x && (x.name || x.image || x.url)) : [];
     if (!items.length) {
@@ -55,11 +71,20 @@
     return `<div class="org-row">${items.map((o) => {
       const name = o.name || '';
       const src = o.image || o.url || '';
-      const img = src
-        ? `<img class="org-logo" src="${escapeAttr(src)}" alt="${escapeAttr(name || 'Logo')}" loading="lazy" referrerpolicy="no-referrer" />`
-        : `<span class="org-logo placeholder" aria-hidden="true"></span>`;
-      return `<div class="org-card">${img}<span class="org-name">${escapeHtml(name || '—')}</span></div>`;
+      return `<div class="org-card">${logoImg(src, name)}<span class="org-name">${escapeHtml(name || '—')}</span></div>`;
     }).join('')}</div>`;
+  }
+
+  function logoByName() {
+    const map = new Map();
+    for (const d of state.data?.developments || []) {
+      for (const o of [...(d.agentOrgs || []), ...(d.developerOrgs || [])]) {
+        if (!o?.name || !o.image) continue;
+        const key = String(o.name).trim().toLowerCase();
+        if (key && !map.has(key)) map.set(key, o.image);
+      }
+    }
+    return map;
   }
 
   function popupHtml(d) {
@@ -145,14 +170,18 @@
       pane.innerHTML = `<p class="meta" style="padding:8px">No ${label} data.</p>`;
       return;
     }
-    pane.innerHTML = rows.map((r) => `
-      <div class="tally">
-        <div>
-          <div>${escapeHtml(r.name)}</div>
+    const logos = logoByName();
+    pane.innerHTML = rows.map((r) => {
+      const img = logos.get(String(r.name || '').trim().toLowerCase()) || '';
+      return `<div class="tally">
+        ${logoImg(img, r.name, 'tally-logo')}
+        <div class="tally-text">
+          <div class="tally-name">${escapeHtml(r.name)}</div>
           ${r.redundant ? `<div class="sub">${r.redundant} redundant</div>` : ''}
         </div>
         <strong>${r.count}</strong>
-      </div>`).join('');
+      </div>`;
+    }).join('');
   }
 
   function syncMarkers(list) {
@@ -168,7 +197,7 @@
       let marker = state.markers.get(d.pathId);
       if (!marker) {
         marker = L.marker([d.lat, d.lng], { icon: markerIcon(!!d.redundant) });
-        marker.bindPopup(() => popupHtml(d), { maxWidth: 280 });
+        marker.bindPopup(() => popupHtml(d), { maxWidth: 320, minWidth: 220, autoPanPadding: [24, 24] });
         marker.on('click', () => selectDev(d.pathId, false));
         state.layer.addLayer(marker);
         state.markers.set(d.pathId, marker);
@@ -342,15 +371,6 @@
   els.q.addEventListener('input', refresh);
   els.status.addEventListener('change', refresh);
   els.hideRedundant.addEventListener('change', refresh);
-
-  document.querySelectorAll('.tab').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach((b) => b.classList.remove('active'));
-      document.querySelectorAll('.pane').forEach((p) => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(`pane-${btn.dataset.tab}`).classList.add('active');
-    });
-  });
 
   els.paneList.addEventListener('click', (e) => {
     const card = e.target.closest('.card[data-id]');
