@@ -6,8 +6,6 @@
     markers: new Map(),
     activeId: null,
     layer: null,
-    townLayer: null,
-    towns: [],
   };
 
   const els = {
@@ -31,8 +29,9 @@
     attributionControl: true,
   }).setView([54.6, -6.5], 8);
 
-  // Flat ocean — no basemap tiles / API keys
-  map.getContainer().style.background = '#6eb5e0';
+  // Ocean backdrop — no basemap tiles / API keys
+  map.getContainer().style.background =
+    'radial-gradient(120% 90% at 50% 35%, #8ec8ea 0%, #6eb5e0 42%, #4f9dcb 100%)';
   map.attributionControl.setPrefix(false);
   map.attributionControl.addAttribution('County boundaries OSNI (OGL)');
 
@@ -257,30 +256,35 @@
       const res = await fetch('data/ni-counties.geojson');
       const geo = await res.json();
 
-      // Dark underside / outskirts — gives the raised 3D edge
+      // Soft land-mass shadow over the ocean
       L.geoJSON(geo, {
         interactive: false,
         style: {
           color: '#1a3f24',
-          weight: 7,
+          weight: 2,
           opacity: 1,
           fillColor: '#245530',
           fillOpacity: 1,
-          className: 'county-poly-edge',
+          className: 'county-poly-shadow',
         },
       }).addTo(map);
 
-      // Original lighter green surface on top
+      // Light green fill + dark stroke drawn on top (inner rim inside each county)
       L.geoJSON(geo, {
         style: {
-          color: '#ffffff',
-          weight: 1.5,
+          color: '#1f4a2c',
+          weight: 8,
           opacity: 1,
           fillColor: '#4f8f58',
           fillOpacity: 1,
           className: 'county-poly',
+          lineJoin: 'round',
         },
         onEachFeature(feature, layer) {
+          // paint-order must be set on the SVG path after Leaflet creates it
+          const el = layer.getElement?.() || layer._path;
+          if (el) el.setAttribute('paint-order', 'fill stroke');
+
           let name = feature.properties?.name;
           if (!name) return;
           if (/^londonderry$/i.test(name)) name = 'Derry/Londonderry';
@@ -297,54 +301,28 @@
             .addTo(map);
         },
       }).addTo(map);
+
+      // White county border hairline on top
+      L.geoJSON(geo, {
+        interactive: false,
+        style: {
+          color: '#ffffff',
+          weight: 1.4,
+          opacity: 1,
+          fill: false,
+          fillOpacity: 0,
+          className: 'county-poly-line',
+          lineJoin: 'round',
+        },
+      }).addTo(map);
     } catch (err) {
       console.warn('County layer failed', err);
-    }
-  }
-
-  function townVisibleAtZoom(town, zoom) {
-    const rank = Number(town.rank) || 2;
-    if (rank <= 1) return zoom >= 7;
-    if (rank <= 2) return zoom >= 9;
-    return zoom >= 11;
-  }
-
-  function renderTownLabels() {
-    if (!state.townLayer) return;
-    state.townLayer.clearLayers();
-    const zoom = map.getZoom();
-    for (const town of state.towns) {
-      if (!townVisibleAtZoom(town, zoom)) continue;
-      if (town.lat == null || town.lng == null) continue;
-      const rank = Number(town.rank) || 2;
-      const tip = L.tooltip({
-        permanent: true,
-        direction: 'center',
-        className: `town-label town-rank-${rank}`,
-        opacity: rank <= 1 ? 0.92 : 0.82,
-      })
-        .setContent(escapeHtml(town.name))
-        .setLatLng([town.lat, town.lng]);
-      tip.addTo(state.townLayer);
-    }
-  }
-
-  async function loadTowns() {
-    try {
-      const res = await fetch('data/ni-towns.json');
-      state.towns = await res.json();
-      state.townLayer = L.layerGroup().addTo(map);
-      renderTownLabels();
-      map.on('zoomend', renderTownLabels);
-    } catch (err) {
-      console.warn('Town labels failed', err);
     }
   }
 
   async function boot() {
     state.layer = L.layerGroup().addTo(map);
     await loadCounties();
-    await loadTowns();
 
     const res = await fetch('data/developments.json');
     state.data = await res.json();
@@ -358,7 +336,6 @@
     if (mapped.length) {
       const bounds = L.latLngBounds(mapped.map((d) => [d.lat, d.lng]));
       map.fitBounds(bounds.pad(0.08));
-      renderTownLabels();
     }
   }
 
