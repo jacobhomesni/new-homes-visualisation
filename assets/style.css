@@ -222,7 +222,15 @@ body {
   position: relative;
   min-width: 0;
 }
-#map { width: 100%; height: 100%; background: #dfe6df; }
+#map { width: 100%; height: 100%; background: #6eb5e0; }
+.pin-icon {
+  background: transparent !important;
+  border: 0 !important;
+}
+.pin-icon svg {
+  display: block;
+  filter: drop-shadow(0 2px 3px rgba(20, 40, 30, 0.35));
+}
 
 .map-legend {
   position: absolute;
@@ -241,16 +249,17 @@ body {
   font-weight: 600;
   color: var(--ink);
 }
-.dot {
+.pin {
   display: inline-block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
+  width: 10px;
+  height: 14px;
   margin-right: 5px;
-  vertical-align: middle;
+  vertical-align: -2px;
+  background: var(--live);
+  clip-path: path("M5 0C2.2 0 0 2.2 0 5c0 3.8 5 9 5 9s5-5.2 5-9C10 2.2 7.8 0 5 0z");
 }
-.dot.live { background: var(--live); box-shadow: 0 0 0 2px rgba(31,122,76,.2); }
-.dot.dead { background: var(--dead); box-shadow: 0 0 0 2px rgba(161,61,45,.2); }
+.pin.live { background: var(--live); }
+.pin.dead { background: var(--dead); }
 .hint { color: var(--muted); font-weight: 500; }
 
 .leaflet-popup-content-wrapper {
@@ -280,12 +289,12 @@ body {
   background: transparent;
   border: 0;
   box-shadow: none;
-  color: #3d4638;
+  color: #1e3d24;
   font: 700 11px/1.1 var(--font);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  opacity: 0.7;
-  text-shadow: 0 1px 2px rgba(255,255,255,.85);
+  opacity: 0.75;
+  text-shadow: 0 1px 0 rgba(255,255,255,.35);
 }
 
 @media (max-width: 860px) {

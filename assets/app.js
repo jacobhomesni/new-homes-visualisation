@@ -26,22 +26,26 @@
     zoomControl: true,
     minZoom: 7,
     maxZoom: 14,
+    attributionControl: true,
   }).setView([54.6, -6.5], 8);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO · County boundaries OSNI (OGL)',
-    subdomains: 'abcd',
-    maxZoom: 19,
-  }).addTo(map);
+  // Flat ocean — no basemap tiles / API keys
+  map.getContainer().style.background = '#6eb5e0';
+  map.attributionControl.setPrefix(false);
+  map.attributionControl.addAttribution('County boundaries OSNI (OGL)');
 
   function markerIcon(redundant) {
-    const color = redundant ? '#a13d2d' : '#1f7a4c';
+    const color = redundant ? '#a13d2d' : '#1a6b3c';
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="40" viewBox="0 0 28 40" aria-hidden="true">
+      <path fill="${color}" stroke="#fff" stroke-width="1.6" d="M14 1.4c-6.1 0-11 4.9-11 11 0 8.3 11 25.2 11 25.2S25 20.7 25 12.4c0-6.1-4.9-11-11-11z"/>
+      <circle cx="14" cy="12.2" r="4.2" fill="#fff"/>
+    </svg>`;
     return L.divIcon({
-      className: '',
-      html: `<span style="display:block;width:14px;height:14px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)"></span>`,
-      iconSize: [14, 14],
-      iconAnchor: [7, 7],
-      popupAnchor: [0, -8],
+      className: 'pin-icon',
+      html: svg,
+      iconSize: [28, 40],
+      iconAnchor: [14, 38],
+      popupAnchor: [0, -34],
     });
   }
 
@@ -189,11 +193,11 @@
       const geo = await res.json();
       L.geoJSON(geo, {
         style: {
-          color: '#6b7464',
-          weight: 1.2,
-          opacity: 0.7,
-          fillColor: '#9aab90',
-          fillOpacity: 0.08,
+          color: '#2f5a38',
+          weight: 1.4,
+          opacity: 0.85,
+          fillColor: '#4f8f58',
+          fillOpacity: 0.92,
         },
         onEachFeature(feature, layer) {
           const name = feature.properties?.name;
@@ -202,7 +206,7 @@
             permanent: true,
             direction: 'center',
             className: 'county-label',
-            opacity: 0.85,
+            opacity: 0.9,
           });
         },
       }).addTo(map);
