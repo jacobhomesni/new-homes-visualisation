@@ -102,8 +102,51 @@
     }
   }
 
+  function isPhoneNumberJunk(name) {
+    return /^phone\s*number$/i.test(String(name || '').trim());
+  }
+
   function isAnonymousDeveloper(name) {
-    return /^(multiple\s+developers|private\s+developer|undisclosed\s+developer)$/i.test(String(name || '').trim());
+    return /^(multiple\s+developers|private\s+developer|undisclosed\s+developers?)$/i.test(String(name || '').trim());
+  }
+
+  function displayOrgName(name) {
+    const raw = String(name || '').trim();
+    if (!raw) return '';
+    if (isPhoneNumberJunk(raw)) return '';
+    if (/^multiple\s+developers$/i.test(raw) || /^undisclosed\s+developers?$/i.test(raw) || /^private\s+developer$/i.test(raw)) {
+      return 'Undisclosed Developers';
+    }
+    return raw;
+  }
+
+  function cleanOrgList(list, fallbackName) {
+    const seen = new Set();
+    const out = [];
+    const push = (name, image, url) => {
+      const display = displayOrgName(name);
+      if (!display) return;
+      const key = display.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      out.push({
+        name: display,
+        image: isAnonymousDeveloper(display) ? '' : (image || ''),
+        url: isAnonymousDeveloper(display) ? '' : (url || ''),
+      });
+    };
+    for (const o of Array.isArray(list) ? list : []) {
+      if (!o) continue;
+      push(o.name, o.image, o.url);
+    }
+    if (!out.length && fallbackName) {
+      String(fallbackName)
+        .split(';')
+        .map((n) => n.trim())
+        .filter(Boolean)
+        .forEach((n) => push(n, '', ''));
+    }
+    return out;
   }
 
   function logoImg(src, name, className = 'org-logo') {
@@ -116,11 +159,8 @@
   }
 
   function orgCards(list, fallbackName) {
-    const items = Array.isArray(list) ? list.filter((x) => x && (x.name || x.image || x.url)) : [];
-    if (!items.length) {
-      if (!fallbackName) return '';
-      return `<div class="org-row"><div class="org-card"><span class="org-name">${escapeHtml(fallbackName)}</span></div></div>`;
-    }
+    const items = cleanOrgList(list, fallbackName);
+    if (!items.length) return '';
     return `<div class="org-row">${items.map((o) => {
       const name = o.name || '';
       const src = isAnonymousDeveloper(name) ? '' : (o.image || o.url || '');
@@ -132,7 +172,7 @@
     const map = new Map();
     for (const d of state.data?.developments || []) {
       for (const o of [...(d.agentOrgs || []), ...(d.developerOrgs || [])]) {
-        if (!o?.name || !o.image || isAnonymousDeveloper(o.name)) continue;
+        if (!o?.name || !o.image || isAnonymousDeveloper(o.name) || isPhoneNumberJunk(o.name)) continue;
         const key = String(o.name).trim().toLowerCase();
         if (key && !map.has(key)) map.set(key, o.image);
       }
@@ -143,21 +183,17 @@
   function popupHtml(d) {
     const homes = d.homesAvailable == null ? '—' : d.homesAvailable;
     const status = d.status || (d.redundant ? 'Sale agreed / redundant' : 'Available');
-    const developers = Array.isArray(d.developerOrgs) && d.developerOrgs.length
-      ? d.developerOrgs
-      : String(d.developers || '').split(';').map((n) => n.trim()).filter(Boolean).map((name) => ({ name }));
-    const agents = Array.isArray(d.agentOrgs) && d.agentOrgs.length
-      ? d.agentOrgs
-      : String(d.agents || '').split(';').map((n) => n.trim()).filter(Boolean).map((name) => ({ name }));
+    const developerCards = orgCards(d.developerOrgs, d.developers || 'Developer n/a');
+    const agentCards = orgCards(d.agentOrgs, d.agents || 'Agent n/a');
     return `<div class="popup">
       <h3>${escapeHtml(d.name)}</h3>
       <p>${escapeHtml(d.address || '')}</p>
       <p><strong>${escapeHtml(String(homes))}</strong> homes available · ${escapeHtml(d.price || 'Price n/a')}</p>
       <p>${escapeHtml(status)}</p>
       <p class="org-label">Developer</p>
-      ${orgCards(developers, d.developers || 'Developer n/a')}
+      ${developerCards || '<div class="org-row"><div class="org-card"><span class="org-name">Developer n/a</span></div></div>'}
       <p class="org-label">Agent</p>
-      ${orgCards(agents, d.agents || 'Agent n/a')}
+      ${agentCards || '<div class="org-row"><div class="org-card"><span class="org-name">Agent n/a</span></div></div>'}
     </div>`;
   }
 
@@ -189,13 +225,47 @@
     });
   }
 
+  function listOrgNames(d, kind) {
+    const orgs = kind === 'agent' ? d.agentOrgs : d.developerOrgs;
+    const fallback = kind === 'agent' ? d.agents : d.developers;
+    return cleanOrgList(orgs, fallback).map((o) => o.name);
+  }
+
+  function buildTallies(list, kind) {
+    const map = new Map();
+    for (const d of list || []) {
+      const names = listOrgNames(d, kind);
+      const unique = [...new Set(names.map((n) => n.trim()).filter(Boolean))];
+      for (const name of unique) {
+        const key = name.toLowerCase();
+        let row = map.get(key);
+        if (!row) {
+          row = { name, count: 0, redundant: 0 };
+          map.set(key, row);
+        }
+        row.count += 1;
+        if (d.redundant) row.redundant += 1;
+      }
+    }
+    return [...map.values()].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'en'));
+  }
+
+  function formatOrgLine(d) {
+    const developers = listOrgNames(d, 'developer');
+    const agents = listOrgNames(d, 'agent');
+    const left = developers.length ? developers.join('; ') : '—';
+    const right = agents.length ? agents.join('; ') : '—';
+    return `${left} · ${right}`;
+  }
+
   function renderStats(list) {
     const homes = list.reduce((n, d) => n + (Number(d.homesAvailable) || 0), 0);
     const redundant = list.filter((d) => d.redundant).length;
+    const agentTallies = buildTallies(list, 'agent');
     els.statsTotal.textContent = String(list.length);
     els.statsHomes.textContent = String(homes);
     els.statsRedundant.textContent = String(redundant);
-    els.statsAgents.textContent = String((state.data.agentTallies || []).length);
+    els.statsAgents.textContent = String(agentTallies.length);
   }
 
   function renderList(list) {
@@ -213,7 +283,7 @@
       return `<button type="button" class="card${active}" data-id="${escapeAttr(d.pathId)}">
         <h3>${escapeHtml(d.name)}</h3>
         <p class="meta">${escapeHtml(d.address || '')}</p>
-        <p class="meta">${escapeHtml(d.developers || '—')} · ${escapeHtml(d.agents || '—')}</p>
+        <p class="meta">${escapeHtml(formatOrgLine(d))}</p>
         <div class="tags">${tags.join('')}</div>
       </button>`;
     }).join('');
@@ -226,7 +296,9 @@
     }
     const logos = logoByName();
     pane.innerHTML = rows.map((r) => {
-      const img = logos.get(String(r.name || '').trim().toLowerCase()) || '';
+      const img = isAnonymousDeveloper(r.name)
+        ? ''
+        : (logos.get(String(r.name || '').trim().toLowerCase()) || '');
       return `<div class="tally">
         ${logoImg(img, r.name, 'tally-logo')}
         <div class="tally-text">
@@ -281,6 +353,8 @@
     const list = filtered();
     renderStats(list);
     renderList(list);
+    renderTallies(els.paneAgents, buildTallies(list, 'agent'), 'agent');
+    renderTallies(els.paneDevelopers, buildTallies(list, 'developer'), 'developer');
     syncMarkers(list);
   }
 
@@ -461,8 +535,6 @@
     await loadCounties(state.data.developments || []);
 
     fillStatusOptions(state.data.developments || []);
-    renderTallies(els.paneAgents, state.data.agentTallies, 'agent');
-    renderTallies(els.paneDevelopers, state.data.developerTallies, 'developer');
     els.meta.textContent = `${state.data.mappedCount || 0} mapped · ${String(state.data.generated || '').slice(0, 10)}`;
     refresh();
 
