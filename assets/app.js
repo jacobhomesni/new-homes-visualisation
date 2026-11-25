@@ -154,7 +154,6 @@
       ${orgCards(developers, d.developers || 'Developer n/a')}
       <p class="org-label">Agent</p>
       ${orgCards(agents, d.agents || 'Agent n/a')}
-      ${d.url ? `<p><a href="${escapeAttr(d.url)}" target="_blank" rel="noopener">Open listing</a></p>` : ''}
     </div>`;
   }
 
