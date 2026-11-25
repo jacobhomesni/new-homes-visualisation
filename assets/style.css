@@ -398,7 +398,9 @@ body {
 .popup a:hover { text-decoration: underline; }
 
 .county-poly {
-  filter: drop-shadow(0 6px 10px rgba(20, 70, 35, 0.55));
+  filter:
+    drop-shadow(0 10px 18px rgba(12, 48, 28, 0.72))
+    drop-shadow(0 4px 8px rgba(8, 36, 20, 0.55));
 }
 .leaflet-overlay-pane svg path.county-poly {
   fill: #4f8f58;
