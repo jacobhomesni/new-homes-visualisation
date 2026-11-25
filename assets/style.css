@@ -139,6 +139,10 @@ body {
   user-select: none;
 }
 
+.mobile-tabs {
+  display: none;
+}
+
 .panels {
   display: flex;
   flex-direction: column;
@@ -555,17 +559,60 @@ body {
     min-height: 44px;
   }
 
+  .mobile-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    flex: 0 0 auto;
+    padding: 4px;
+    border-radius: 12px;
+    background: #ebe7dc;
+  }
+  .mobile-tab {
+    border: 0;
+    border-radius: 9px;
+    min-height: 40px;
+    padding: 8px 6px;
+    background: transparent;
+    color: var(--muted);
+    font: 700 0.78rem/1 var(--font);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-tab.active {
+    background: #fff;
+    color: var(--blue-deep);
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  }
+
   .panels {
-    gap: 10px;
+    gap: 0;
   }
-  .panel-list {
-    flex: 1.6;
-    min-height: 140px;
-  }
-  .panel-orgs {
+  .panel-list,
+  .panel-orgs,
+  .org-col {
+    display: none;
     flex: 1;
-    min-height: 120px;
-    gap: 8px;
+    min-height: 0;
+  }
+  .panels[data-active-panel="list"] .panel-list,
+  .panels[data-active-panel="agents"] .org-col[data-panel-pane="agents"],
+  .panels[data-active-panel="developers"] .org-col[data-panel-pane="developers"] {
+    display: flex;
+  }
+  .panels[data-active-panel="agents"] .panel-orgs,
+  .panels[data-active-panel="developers"] .panel-orgs {
+    display: flex;
+    grid-template-columns: 1fr;
+  }
+  .panel-list > .panel-title,
+  .org-col > .panel-title {
+    display: none;
+  }
+  .org-col {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
   }
 
   .card {
@@ -684,9 +731,5 @@ body {
 @media (max-width: 420px) {
   .stats {
     grid-template-columns: 1fr 1fr;
-  }
-  .panel-orgs {
-    grid-template-columns: 1fr;
-    min-height: 160px;
   }
 }

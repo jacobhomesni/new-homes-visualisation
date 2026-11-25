@@ -468,10 +468,29 @@
     map.invalidateSize({ animate: false });
   }
 
+  function setMobilePanel(panel) {
+    const panels = document.querySelector('.panels');
+    if (!panels) return;
+    const next = panel || 'list';
+    panels.dataset.activePanel = next;
+    document.querySelectorAll('.mobile-tab').forEach((btn) => {
+      const on = btn.dataset.panel === next;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+  }
+
   function bindSheetUi() {
-    els.browseFab?.addEventListener('click', () => setSheetOpen(true));
+    els.browseFab?.addEventListener('click', () => {
+      setMobilePanel('list');
+      setSheetOpen(true);
+    });
     els.sheetClose?.addEventListener('click', () => setSheetOpen(false));
     els.sheetBackdrop?.addEventListener('click', () => setSheetOpen(false));
+
+    document.querySelectorAll('.mobile-tab').forEach((btn) => {
+      btn.addEventListener('click', () => setMobilePanel(btn.dataset.panel));
+    });
 
     let startY = 0;
     let dragging = false;
