@@ -1,6 +1,6 @@
 # NI New Homes Map
 
-GitHub Pages dashboard for the PropertyPal new-developments audit export.
+GitHub Pages dashboard for the Northern Ireland new-developments audit export.
 
 - Map of Northern Ireland with county outlines (OSNI Open Data, OGL)
 - Pinpoints for each development (town / postcode geocoding from audit addresses)
@@ -18,11 +18,10 @@ Then open the printed local URL.
 
 ## Update data
 
-1. Export a fresh Excel from the **PropertyPal New Homes Audit** userscript.
+1. Export a fresh Excel from the new-homes audit userscript.
 2. Convert with the helpers in `scripts/` (or replace `data/developments.json`).
 3. Commit and push to `main` — Pages updates automatically.
 
 ## Licence notes
 
 County boundaries: © Ordnance Survey of Northern Ireland, Open Government Licence.
-Property listing data: scraped for internal Homes NI use from PropertyPal public pages.

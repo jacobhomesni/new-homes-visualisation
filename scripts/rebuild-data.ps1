@@ -54,6 +54,11 @@ foreach ($g in $geo.developments) {
   $name = CleanText ($(if ($src) { $src.name } else { $g.name }))
   $address = CleanText ($(if ($src) { $src.address } else { $g.address }))
   $priceRaw = if ($src -and $src.price) { [string]$src.price } else { [string]$g.price }
+  $devOrgs = @()
+  if ($g.developerOrgs) { $devOrgs = @($g.developerOrgs) }
+  $agentOrgs = @()
+  if ($g.agentOrgs) { $agentOrgs = @($g.agentOrgs) }
+
   [void]$out.Add([ordered]@{
       pathId         = $g.pathId
       name           = $name
@@ -63,7 +68,9 @@ foreach ($g in $geo.developments) {
       redundant      = [bool]$g.redundant
       price          = (FixPrice $priceRaw)
       developers     = CleanText ([string]$(if ($src) { $src.developers } else { $g.developers }))
+      developerOrgs  = $devOrgs
       agents         = CleanText ([string]$(if ($src) { $src.agents } else { $g.agents }))
+      agentOrgs      = $agentOrgs
       url            = $g.url
       town           = CleanText ([string]$g.town)
       lat            = $g.lat

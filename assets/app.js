@@ -35,30 +35,51 @@
   map.attributionControl.addAttribution('County boundaries OSNI (OGL)');
 
   function markerIcon(redundant) {
-    const color = redundant ? '#a13d2d' : '#1a6b3c';
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="40" viewBox="0 0 28 40" aria-hidden="true">
-      <path fill="${color}" stroke="#fff" stroke-width="1.6" d="M14 1.4c-6.1 0-11 4.9-11 11 0 8.3 11 25.2 11 25.2S25 20.7 25 12.4c0-6.1-4.9-11-11-11z"/>
-      <circle cx="14" cy="12.2" r="4.2" fill="#fff"/>
-    </svg>`;
+    const color = redundant ? '#a13d2d' : '#1f7a4c';
     return L.divIcon({
-      className: 'pin-icon',
-      html: svg,
-      iconSize: [28, 40],
-      iconAnchor: [14, 38],
-      popupAnchor: [0, -34],
+      className: '',
+      html: `<span style="display:block;width:14px;height:14px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)"></span>`,
+      iconSize: [14, 14],
+      iconAnchor: [7, 7],
+      popupAnchor: [0, -8],
     });
+  }
+
+  function orgCards(list, fallbackName) {
+    const items = Array.isArray(list) ? list.filter((x) => x && (x.name || x.image || x.url)) : [];
+    if (!items.length) {
+      if (!fallbackName) return '';
+      return `<div class="org-row"><div class="org-card"><span class="org-name">${escapeHtml(fallbackName)}</span></div></div>`;
+    }
+    return `<div class="org-row">${items.map((o) => {
+      const name = o.name || '';
+      const src = o.image || o.url || '';
+      const img = src
+        ? `<img class="org-logo" src="${escapeAttr(src)}" alt="${escapeAttr(name || 'Logo')}" loading="lazy" referrerpolicy="no-referrer" />`
+        : `<span class="org-logo placeholder" aria-hidden="true"></span>`;
+      return `<div class="org-card">${img}<span class="org-name">${escapeHtml(name || '—')}</span></div>`;
+    }).join('')}</div>`;
   }
 
   function popupHtml(d) {
     const homes = d.homesAvailable == null ? '—' : d.homesAvailable;
     const status = d.status || (d.redundant ? 'Sale agreed / redundant' : 'Available');
+    const developers = Array.isArray(d.developerOrgs) && d.developerOrgs.length
+      ? d.developerOrgs
+      : String(d.developers || '').split(';').map((n) => n.trim()).filter(Boolean).map((name) => ({ name }));
+    const agents = Array.isArray(d.agentOrgs) && d.agentOrgs.length
+      ? d.agentOrgs
+      : String(d.agents || '').split(';').map((n) => n.trim()).filter(Boolean).map((name) => ({ name }));
     return `<div class="popup">
       <h3>${escapeHtml(d.name)}</h3>
       <p>${escapeHtml(d.address || '')}</p>
       <p><strong>${escapeHtml(String(homes))}</strong> homes available · ${escapeHtml(d.price || 'Price n/a')}</p>
       <p>${escapeHtml(status)}</p>
-      <p>${escapeHtml(d.developers || 'Developer n/a')} · ${escapeHtml(d.agents || 'Agent n/a')}</p>
-      <p><a href="${escapeAttr(d.url)}" target="_blank" rel="noopener">Open on PropertyPal</a></p>
+      <p class="org-label">Developer</p>
+      ${orgCards(developers, d.developers || 'Developer n/a')}
+      <p class="org-label">Agent</p>
+      ${orgCards(agents, d.agents || 'Agent n/a')}
+      ${d.url ? `<p><a href="${escapeAttr(d.url)}" target="_blank" rel="noopener">Open listing</a></p>` : ''}
     </div>`;
   }
 
@@ -193,11 +214,11 @@
       const geo = await res.json();
       L.geoJSON(geo, {
         style: {
-          color: '#2f5a38',
-          weight: 1.4,
-          opacity: 0.85,
-          fillColor: '#4f8f58',
-          fillOpacity: 0.92,
+          color: '#ffffff',
+          weight: 1.6,
+          opacity: 1,
+          fillColor: '#ffffff',
+          fillOpacity: 0.96,
         },
         onEachFeature(feature, layer) {
           const name = feature.properties?.name;
@@ -224,7 +245,7 @@
     fillStatusOptions(state.data.developments || []);
     renderTallies(els.paneAgents, state.data.agentTallies, 'agent');
     renderTallies(els.paneDevelopers, state.data.developerTallies, 'developer');
-    els.meta.textContent = `${state.data.mappedCount || 0} mapped · source ${state.data.source || 'audit export'} · ${String(state.data.generated || '').slice(0, 10)}`;
+    els.meta.textContent = `${state.data.mappedCount || 0} mapped · ${String(state.data.generated || '').slice(0, 10)}`;
     refresh();
 
     const mapped = (state.data.developments || []).filter((d) => d.lat != null);
