@@ -404,7 +404,7 @@
   function countyLabelHtml(name, count, available) {
     return `<div class="county-label-text">
       <div class="county-label-name">${escapeHtml(name)}</div>
-      <div class="county-label-meta">(${count} developments, ${available} available)</div>
+      <div class="county-label-meta">(${count} developments,<br>${available} available)</div>
     </div>`;
   }
 
