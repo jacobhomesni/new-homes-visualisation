@@ -208,6 +208,48 @@
       opts.map((s) => `<option value="${escapeAttr(s)}">${escapeHtml(s)}</option>`).join('');
   }
 
+  function ringBoundsCenter(ring) {
+    let minLat = 90;
+    let maxLat = -90;
+    let minLng = 180;
+    let maxLng = -180;
+    for (const pt of ring || []) {
+      const lng = Number(pt[0]);
+      const lat = Number(pt[1]);
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lng > maxLng) maxLng = lng;
+    }
+    if (minLat > maxLat || minLng > maxLng) return null;
+    return {
+      latlng: L.latLng((minLat + maxLat) / 2, (minLng + maxLng) / 2),
+      score: (maxLat - minLat) * (maxLng - minLng),
+    };
+  }
+
+  /** Prefer the largest polygon so tiny islands don't yank labels (e.g. Down). */
+  function countyLabelLatLng(feature, fallbackLayer) {
+    const geom = feature?.geometry;
+    let best = null;
+    if (geom?.type === 'Polygon') {
+      best = ringBoundsCenter(geom.coordinates?.[0]);
+    } else if (geom?.type === 'MultiPolygon') {
+      for (const poly of geom.coordinates || []) {
+        const candidate = ringBoundsCenter(poly?.[0]);
+        if (!candidate) continue;
+        if (!best || candidate.score > best.score) best = candidate;
+      }
+    }
+    if (best?.latlng) return best.latlng;
+    try {
+      return fallbackLayer.getBounds().getCenter();
+    } catch (_) {
+      return null;
+    }
+  }
+
   async function loadCounties() {
     try {
       const res = await fetch('data/ni-counties.geojson');
@@ -215,21 +257,27 @@
       L.geoJSON(geo, {
         style: {
           color: '#ffffff',
-          weight: 1.6,
+          weight: 2,
           opacity: 1,
-          fillColor: '#4f8f58',
-          fillOpacity: 0.92,
+          fillColor: '#2f6b3c',
+          fillOpacity: 1,
+          className: 'county-poly',
         },
         onEachFeature(feature, layer) {
           let name = feature.properties?.name;
           if (!name) return;
           if (/^londonderry$/i.test(name)) name = 'Derry/Londonderry';
-          layer.bindTooltip(name, {
+          const latlng = countyLabelLatLng(feature, layer);
+          if (!latlng) return;
+          L.tooltip({
             permanent: true,
             direction: 'center',
             className: 'county-label',
             opacity: 0.95,
-          });
+          })
+            .setContent(name)
+            .setLatLng(latlng)
+            .addTo(map);
         },
       }).addTo(map);
     } catch (err) {
