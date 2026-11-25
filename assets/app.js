@@ -6,6 +6,8 @@
     markers: new Map(),
     activeId: null,
     layer: null,
+    townLayer: null,
+    towns: [],
   };
 
   const els = {
@@ -38,7 +40,7 @@
     const color = redundant ? '#a13d2d' : '#1f7a4c';
     return L.divIcon({
       className: '',
-      html: `<span style="display:block;width:14px;height:14px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)"></span>`,
+      html: `<span style="display:block;width:14px;height:14px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 2px 6px rgba(10,30,18,.45), 0 1px 0 rgba(255,255,255,.35) inset"></span>`,
       iconSize: [14, 14],
       iconAnchor: [7, 7],
       popupAnchor: [0, -8],
@@ -254,12 +256,27 @@
     try {
       const res = await fetch('data/ni-counties.geojson');
       const geo = await res.json();
+
+      // Dark underside / outskirts — gives the raised 3D edge
+      L.geoJSON(geo, {
+        interactive: false,
+        style: {
+          color: '#1a3f24',
+          weight: 7,
+          opacity: 1,
+          fillColor: '#245530',
+          fillOpacity: 1,
+          className: 'county-poly-edge',
+        },
+      }).addTo(map);
+
+      // Original lighter green surface on top
       L.geoJSON(geo, {
         style: {
           color: '#ffffff',
-          weight: 2,
+          weight: 1.5,
           opacity: 1,
-          fillColor: '#2f6b3c',
+          fillColor: '#4f8f58',
           fillOpacity: 1,
           className: 'county-poly',
         },
@@ -285,9 +302,49 @@
     }
   }
 
+  function townVisibleAtZoom(town, zoom) {
+    const rank = Number(town.rank) || 2;
+    if (rank <= 1) return zoom >= 7;
+    if (rank <= 2) return zoom >= 9;
+    return zoom >= 11;
+  }
+
+  function renderTownLabels() {
+    if (!state.townLayer) return;
+    state.townLayer.clearLayers();
+    const zoom = map.getZoom();
+    for (const town of state.towns) {
+      if (!townVisibleAtZoom(town, zoom)) continue;
+      if (town.lat == null || town.lng == null) continue;
+      const rank = Number(town.rank) || 2;
+      const tip = L.tooltip({
+        permanent: true,
+        direction: 'center',
+        className: `town-label town-rank-${rank}`,
+        opacity: rank <= 1 ? 0.92 : 0.82,
+      })
+        .setContent(escapeHtml(town.name))
+        .setLatLng([town.lat, town.lng]);
+      tip.addTo(state.townLayer);
+    }
+  }
+
+  async function loadTowns() {
+    try {
+      const res = await fetch('data/ni-towns.json');
+      state.towns = await res.json();
+      state.townLayer = L.layerGroup().addTo(map);
+      renderTownLabels();
+      map.on('zoomend', renderTownLabels);
+    } catch (err) {
+      console.warn('Town labels failed', err);
+    }
+  }
+
   async function boot() {
     state.layer = L.layerGroup().addTo(map);
     await loadCounties();
+    await loadTowns();
 
     const res = await fetch('data/developments.json');
     state.data = await res.json();
@@ -301,6 +358,7 @@
     if (mapped.length) {
       const bounds = L.latLngBounds(mapped.map((d) => [d.lat, d.lng]));
       map.fitBounds(bounds.pad(0.08));
+      renderTownLabels();
     }
   }
 
