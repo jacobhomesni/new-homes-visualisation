@@ -16,6 +16,7 @@
     statsAgents: document.getElementById('stat-agents'),
     q: document.getElementById('q'),
     filterMicrosite: document.getElementById('filter-microsite'),
+    filterHomesNi: document.getElementById('filter-homesni'),
     status: document.getElementById('status'),
     hideRedundant: document.getElementById('hide-redundant'),
     paneList: document.getElementById('pane-list'),
@@ -79,13 +80,26 @@
   function markerIcon(dev) {
     const redundant = !!(dev && dev.redundant);
     const microsite = !!(dev && dev.hasMicrosite);
-    // Redundant stays red; microsites get gold; otherwise live green.
-    const color = redundant ? '#a13d2d' : (microsite ? '#c9a227' : '#1f7a4c');
+    const onHomesNi = !!(dev && dev.onHomesNi);
+    // Redundant red → microsite gold → on HomesNI blue → live green.
+    let color = '#1f7a4c';
+    let extraClass = '';
+    let glow = '0 2px 6px rgba(10,30,18,.45), 0 1px 0 rgba(255,255,255,.35) inset';
+    if (redundant) {
+      color = '#a13d2d';
+    } else if (microsite) {
+      color = '#c9a227';
+      extraClass = ' dev-marker-microsite';
+    } else if (onHomesNi) {
+      color = '#1f50b3';
+      extraClass = ' dev-marker-homesni';
+      glow = '0 0 10px rgba(31,80,179,.75), 0 0 18px rgba(31,80,179,.45), 0 2px 6px rgba(10,30,18,.35), 0 1px 0 rgba(255,255,255,.35) inset';
+    }
     const size = isMobile() ? 10 : 14;
     const half = size / 2;
     return L.divIcon({
-      className: 'dev-marker' + (microsite && !redundant ? ' dev-marker-microsite' : ''),
-      html: `<span style="display:block;width:${size}px;height:${size}px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 2px 6px rgba(10,30,18,.45), 0 1px 0 rgba(255,255,255,.35) inset"></span>`,
+      className: 'dev-marker' + extraClass,
+      html: `<span style="display:block;width:${size}px;height:${size}px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:${glow}"></span>`,
       iconSize: [size, size],
       iconAnchor: [half, half],
       popupAnchor: [0, -half - 2],
@@ -185,11 +199,15 @@
     const status = d.status || (d.redundant ? 'Sale agreed / redundant' : 'Available');
     const developerCards = orgCards(d.developerOrgs, d.developers || 'Developer n/a');
     const agentCards = orgCards(d.agentOrgs, d.agents || 'Agent n/a');
+    const homesNiLink = d.onHomesNi && d.homesNiUrl
+      ? `<p><a href="${escapeAttr(d.homesNiUrl)}" target="_blank" rel="noopener">View on HomesNI</a></p>`
+      : (d.onHomesNi ? '<p>On HomesNI</p>' : '');
     return `<div class="popup">
       <h3>${escapeHtml(d.name)}</h3>
       <p>${escapeHtml(d.address || '')}</p>
       <p><strong>${escapeHtml(String(homes))}</strong> homes available · ${escapeHtml(d.price || 'Price n/a')}</p>
       <p>${escapeHtml(status)}</p>
+      ${homesNiLink}
       <p class="org-label">Developer</p>
       ${developerCards || '<div class="org-row"><div class="org-card"><span class="org-name">Developer n/a</span></div></div>'}
       <p class="org-label">Agent</p>
@@ -213,9 +231,11 @@
     const status = els.status.value;
     const hideRedundant = els.hideRedundant.checked;
     const micrositeOnly = !!(els.filterMicrosite && els.filterMicrosite.checked);
+    const notOnHomesNi = !!(els.filterHomesNi && els.filterHomesNi.checked);
     return (state.data.developments || []).filter((d) => {
       if (hideRedundant && d.redundant) return false;
       if (micrositeOnly && !d.hasMicrosite) return false;
+      if (notOnHomesNi && d.onHomesNi) return false;
       if (status && String(d.status || '') !== status) return false;
       if (!q) return true;
       const hay = [d.name, d.address, d.town, d.agents, d.developers, d.status, d.pathId]
@@ -602,6 +622,7 @@
 
   els.q.addEventListener('input', refresh);
   els.filterMicrosite?.addEventListener('change', refresh);
+  els.filterHomesNi?.addEventListener('change', refresh);
   els.status.addEventListener('change', refresh);
   els.hideRedundant.addEventListener('change', refresh);
 

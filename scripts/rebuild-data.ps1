@@ -64,6 +64,18 @@ foreach ($g in $geo.developments) {
   if ($src -and $null -ne $src.hasMicrosite) { $hasMicrosite = [bool]$src.hasMicrosite }
   elseif ($null -ne $g.hasMicrosite) { $hasMicrosite = [bool]$g.hasMicrosite }
 
+  $onHomesNi = $false
+  if ($src -and $null -ne $src.onHomesNi) { $onHomesNi = [bool]$src.onHomesNi }
+  elseif ($null -ne $g.onHomesNi) { $onHomesNi = [bool]$g.onHomesNi }
+
+  $homesNiUrl = ''
+  if ($src -and $src.homesNiUrl) { $homesNiUrl = CleanText ([string]$src.homesNiUrl) }
+  elseif ($g.homesNiUrl) { $homesNiUrl = CleanText ([string]$g.homesNiUrl) }
+
+  $homesNiAgent = $false
+  if ($src -and $null -ne $src.homesNiAgent) { $homesNiAgent = [bool]$src.homesNiAgent }
+  elseif ($null -ne $g.homesNiAgent) { $homesNiAgent = [bool]$g.homesNiAgent }
+
   [void]$out.Add([ordered]@{
       pathId         = $g.pathId
       name           = $name
@@ -72,6 +84,9 @@ foreach ($g in $geo.developments) {
       homesAvailable = $g.homesAvailable
       redundant      = [bool]$g.redundant
       hasMicrosite   = $hasMicrosite
+      onHomesNi      = $onHomesNi
+      homesNiUrl     = $homesNiUrl
+      homesNiAgent   = $homesNiAgent
       price          = (FixPrice $priceRaw)
       developers     = CleanText ([string]$(if ($src) { $src.developers } else { $g.developers }))
       developerOrgs  = $devOrgs

@@ -357,6 +357,8 @@ foreach ($d in $audit.developments) {
       lng            = if ($null -ne $lng) { [math]::Round($lng + $jitterLng, 6) } else { $null }
   }
   if ($null -ne $d.hasMicrosite) { $row.hasMicrosite = [bool]$d.hasMicrosite }
+  if ($null -ne $d.onHomesNi) { $row.onHomesNi = [bool]$d.onHomesNi }
+  if ($d.homesNiUrl) { $row.homesNiUrl = [string]$d.homesNiUrl }
   [void]$geo.Add([pscustomobject]$row)
 }
 

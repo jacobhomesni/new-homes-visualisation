@@ -35,6 +35,11 @@ try {
     return ([string]$ws.Cells.Item($r, (Col $name)).Text).Trim()
   }
 
+  function OptCell([int]$r, [string]$name) {
+    if (-not $headers.ContainsKey($name)) { return '' }
+    return ([string]$ws.Cells.Item($r, [int]$headers[$name]).Text).Trim()
+  }
+
   function ParseInt($s) {
     if ([string]::IsNullOrWhiteSpace($s)) { return $null }
     $n = 0
@@ -76,10 +81,22 @@ try {
     if (-not $pathId -and $url -match '/(d\d+)\s*$') { $pathId = $Matches[1] }
     if (-not $pathId -and -not $url) { continue }
 
-    $ms = Cell $r 'Has Microsite?'
+    $ms = OptCell $r 'Has Microsite?'
     $hasMicrosite = $null
     if ($ms -eq 'YES') { $hasMicrosite = $true }
     elseif ($ms -eq 'NO') { $hasMicrosite = $false }
+
+    $onHniRaw = OptCell $r 'On HomesNI?'
+    $onHomesNi = $null
+    if ($onHniRaw -eq 'YES') { $onHomesNi = $true }
+    elseif ($onHniRaw -eq 'NO') { $onHomesNi = $false }
+
+    $homesNiUrl = OptCell $r 'HomesNI URL'
+    $town = OptCell $r 'Town'
+    $hniAgentRaw = OptCell $r 'HomesNI agent?'
+    $homesNiAgent = $null
+    if ($hniAgentRaw -eq 'YES') { $homesNiAgent = $true }
+    elseif ($hniAgentRaw -eq 'NO') { $homesNiAgent = $false }
 
     $redundantRaw = Cell $r 'Sale agreed / redundant'
     $redundant = $redundantRaw -match '^(?i)yes|true|1$'
@@ -87,14 +104,18 @@ try {
     [void]$devs.Add([ordered]@{
         name           = Cell $r 'Development'
         address        = Cell $r 'Address'
+        town           = $town
         status         = Cell $r 'Status'
         homesAvailable = (ParseInt (Cell $r 'Homes available'))
-        homesTotal     = (ParseInt (Cell $r 'Homes total (listed)'))
+        homesTotal     = (ParseInt (OptCell $r 'Homes total (listed)'))
         redundant      = [bool]$redundant
         hasMicrosite   = $hasMicrosite
+        onHomesNi      = $onHomesNi
+        homesNiUrl     = $homesNiUrl
+        homesNiAgent   = $homesNiAgent
         price          = Cell $r 'Price'
         developers     = Cell $r 'Developer(s)'
-        developerNote  = Cell $r 'Developer note'
+        developerNote  = OptCell $r 'Developer note'
         agents         = Cell $r 'Agent(s)'
         url            = $url
         pathId         = $pathId
@@ -112,12 +133,15 @@ finally {
 
 $yes = @($devs | Where-Object { $_.hasMicrosite -eq $true }).Count
 $no = @($devs | Where-Object { $_.hasMicrosite -eq $false }).Count
+$hniYes = @($devs | Where-Object { $_.onHomesNi -eq $true }).Count
+$hniNo = @($devs | Where-Object { $_.onHomesNi -eq $false }).Count
 $payload = [ordered]@{
   generated         = (Get-Date -Format 'yyyy-MM-dd')
   source            = [System.IO.Path]::GetFileName($xlsx)
   totalDevelopments = $devs.Count
   redundantCount    = @($devs | Where-Object { $_.redundant }).Count
   micrositeCount    = $yes
+  onHomesNiCount    = $hniYes
   developments      = $devs
   agentTallies      = $agentTallies
   developerTallies  = $devTallies
@@ -126,4 +150,4 @@ $payload = [ordered]@{
 $json = $payload | ConvertTo-Json -Depth 8
 [System.IO.File]::WriteAllText($outPath, $json, $utf8)
 Write-Host "Wrote $outPath"
-Write-Host "developments=$($devs.Count) micrositeYes=$yes micrositeNo=$no agents=$($agentTallies.Count) developers=$($devTallies.Count)"
+Write-Host "developments=$($devs.Count) micrositeYes=$yes micrositeNo=$no onHomesNiYes=$hniYes onHomesNiNo=$hniNo agents=$($agentTallies.Count) developers=$($devTallies.Count)"

@@ -158,6 +158,8 @@ foreach ($d in $raw.developments) {
       lng            = $d.lng
   }
   if ($null -ne $d.hasMicrosite) { $row.hasMicrosite = [bool]$d.hasMicrosite }
+  if ($null -ne $d.onHomesNi) { $row.onHomesNi = [bool]$d.onHomesNi }
+  if ($d.homesNiUrl) { $row.homesNiUrl = [string]$d.homesNiUrl }
   [void]$outDevs.Add($row)
 }
 
