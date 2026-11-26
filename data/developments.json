@@ -1,10 +1,10 @@
 {
-    "generated":  "2026-11-25T16:07:10.4732815+00:00",
+    "generated":  "2026-11-26T16:27:02.1390609+00:00",
     "source":  "homesni-new-homes-presence-2026-11-25.xlsx",
     "totalDevelopments":  269,
     "mappedCount":  269,
     "redundantCount":  2,
-    "onHomesNiCount":  189,
+    "onHomesNiCount":  213,
     "developments":  [
                          {
                              "pathId":  "d3711",
@@ -17,7 +17,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£289,950",
+                             "price":  "Ã‚Â£289,950",
                              "developers":  "Lisbreen Builders",
                              "developerOrgs":  [
                                                    {
@@ -45,10 +45,10 @@
                              "homesAvailable":  1,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
+                             "onHomesNi":  true,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£530,000",
+                             "price":  "Ã‚Â£530,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -79,7 +79,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/newtownards/3-NTN260321/site-21/",
                              "homesNiAgent":  true,
-                             "price":  "£355,000 to £417,500",
+                             "price":  "Ã‚Â£355,000 to Ã‚Â£417,500",
                              "developers":  "Fraser Partners",
                              "developerOrgs":  [
                                                    {
@@ -110,7 +110,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/crumlin/64-ljs881402/6a-a-carmavy-road/",
                              "homesNiAgent":  true,
-                             "price":  "£799,950",
+                             "price":  "Ã‚Â£799,950",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -141,7 +141,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/shore-road/3-NBF260301/",
                              "homesNiAgent":  true,
-                             "price":  "£219,950 to £259,950",
+                             "price":  "Ã‚Â£219,950 to Ã‚Â£259,950",
                              "developers":  "BlueHouse Development Ltd",
                              "developerOrgs":  [
                                                    {
@@ -176,7 +176,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portstewart/38-ppr793135/apt-1/",
                              "homesNiAgent":  true,
-                             "price":  "£315,000",
+                             "price":  "Ã‚Â£315,000",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -207,7 +207,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£299,500 to £385,000",
+                             "price":  "Ã‚Â£299,500 to Ã‚Â£385,000",
                              "developers":  "PRH Construction NI Ltd",
                              "developerOrgs":  [
                                                    {
@@ -238,7 +238,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/130-687908/24/",
                              "homesNiAgent":  true,
-                             "price":  "£342,500 to £371,500",
+                             "price":  "Ã‚Â£342,500 to Ã‚Â£371,500",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -270,8 +270,8 @@
                              "homesAvailable":  1,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/cultra/18-CNRCJBE2849/",
                              "homesNiAgent":  true,
                              "price":  "Price Not Provided",
                              "developers":  "Valor Homes",
@@ -308,7 +308,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/greenisland/76-19481172/the-johnston-ardkeen-manor/",
                              "homesNiAgent":  true,
-                             "price":  "£370,000 to £425,000",
+                             "price":  "Ã‚Â£370,000 to Ã‚Â£425,000",
                              "developers":  "Rosemount Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -339,7 +339,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/130-1094163/26/",
                              "homesNiAgent":  true,
-                             "price":  "£229,995 to £234,995",
+                             "price":  "Ã‚Â£229,995 to Ã‚Â£234,995",
                              "developers":  "Steadland Ltd; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -375,10 +375,10 @@
                              "homesAvailable":  1,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/portadown/130-1089412/",
                              "homesNiAgent":  true,
-                             "price":  "£210,000",
+                             "price":  "Ã‚Â£210,000",
                              "developers":  "GKM Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -409,7 +409,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£260,000 to £285,000",
+                             "price":  "Ã‚Â£260,000 to Ã‚Â£285,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -440,7 +440,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lisburn-city/13-TRLISTRLIS104103/site-14-ballantine-garden-village/",
                              "homesNiAgent":  true,
-                             "price":  "£250,000 to £549,950",
+                             "price":  "Ã‚Â£250,000 to Ã‚Â£549,950",
                              "developers":  "Hagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -475,7 +475,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/holywood/18-CNRCJBE3069/6-ballymenoch-demesne/",
                              "homesNiAgent":  true,
-                             "price":  "£1,495,000 to £1,650,000",
+                             "price":  "Ã‚Â£1,495,000 to Ã‚Â£1,650,000",
                              "developers":  "Blue Horizon Developments",
                              "developerOrgs":  [
                                                    {
@@ -503,10 +503,10 @@
                              "homesAvailable":  9,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/craigavon/62-19304734/",
                              "homesNiAgent":  true,
-                             "price":  "£262,500 to £315,000",
+                             "price":  "Ã‚Â£262,500 to Ã‚Â£315,000",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -541,7 +541,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£250,000 to £335,000",
+                             "price":  "Ã‚Â£250,000 to Ã‚Â£335,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -572,7 +572,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portrush/38-ppr819025/site-20-ballywillin-gardens/",
                              "homesNiAgent":  true,
-                             "price":  "£367,950 to £669,950",
+                             "price":  "Ã‚Â£367,950 to Ã‚Â£669,950",
                              "developers":  "Lotus Homes",
                              "developerOrgs":  [
                                                    {
@@ -607,7 +607,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR251012/site-176/",
                              "homesNiAgent":  true,
-                             "price":  "£307,500 to £550,000",
+                             "price":  "Ã‚Â£307,500 to Ã‚Â£550,000",
                              "developers":  "Fraser Homes Ltd; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -642,7 +642,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/carrickfergus/69-CAR250486/site-136---the-jocelyn/",
                              "homesNiAgent":  true,
-                             "price":  "£269,950 to £310,000",
+                             "price":  "Ã‚Â£269,950 to Ã‚Â£310,000",
                              "developers":  "Windsor Developments",
                              "developerOrgs":  [
                                                    {
@@ -673,7 +673,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR261507/site-33-the-broadway/",
                              "homesNiAgent":  true,
-                             "price":  "£332,500 to £525,000",
+                             "price":  "Ã‚Â£332,500 to Ã‚Â£525,000",
                              "developers":  "Fraser Millar",
                              "developerOrgs":  [
                                                    {
@@ -708,7 +708,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/larne/25-BTODBTOD5815/89-beech-hill-square/",
                              "homesNiAgent":  true,
-                             "price":  "£209,950 to £269,950",
+                             "price":  "Ã‚Â£209,950 to Ã‚Â£269,950",
                              "developers":  "Nuport Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -774,7 +774,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/strabane/2-DER19651/site-155-beechmount-village/",
                              "homesNiAgent":  false,
-                             "price":  "£169,950",
+                             "price":  "Ã‚Â£169,950",
                              "developers":  "Kevin Watson Group",
                              "developerOrgs":  [
                                                    {
@@ -805,7 +805,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/130-1044248/4-bellfield-park/",
                              "homesNiAgent":  true,
-                             "price":  "£265,000 to £380,000",
+                             "price":  "Ã‚Â£265,000 to Ã‚Â£380,000",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -840,7 +840,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/antrim-town/3-LBR260177/site-150/",
                              "homesNiAgent":  true,
-                             "price":  "£284,950 to £527,950",
+                             "price":  "Ã‚Â£284,950 to Ã‚Â£527,950",
                              "developers":  "Antrim Construction Company Limited; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -879,7 +879,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/antrim-road/3-NBF250170/site-56-including-garage/",
                              "homesNiAgent":  true,
-                             "price":  "£635,000 to £665,000",
+                             "price":  "Ã‚Â£635,000 to Ã‚Â£665,000",
                              "developers":  "Alskea Ltd",
                              "developerOrgs":  [
                                                    {
@@ -910,7 +910,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/69-NEW240143/",
                              "homesNiAgent":  true,
-                             "price":  "£260,000",
+                             "price":  "Ã‚Â£260,000",
                              "developers":  "Lagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -941,7 +941,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/2-POR19067/unit-5-birch-hall---the-willow/",
                              "homesNiAgent":  true,
-                             "price":  "£189,000 to £239,000",
+                             "price":  "Ã‚Â£189,000 to Ã‚Â£239,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -972,7 +972,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/130-1048144/8/",
                              "homesNiAgent":  true,
-                             "price":  "£281,500",
+                             "price":  "Ã‚Â£281,500",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -1007,7 +1007,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/maghera/6-BHO1054836/the-ardtara-plot-32-blackberry-hill/",
                              "homesNiAgent":  true,
-                             "price":  "£269,950 to £279,950",
+                             "price":  "Ã‚Â£269,950 to Ã‚Â£279,950",
                              "developers":  "FP McCann",
                              "developerOrgs":  [
                                                    {
@@ -1038,7 +1038,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/larne/39-HCLC1A10005897/detached/",
                              "homesNiAgent":  true,
-                             "price":  "£220,000",
+                             "price":  "Ã‚Â£220,000",
                              "developers":  "Fraser Homes Ltd; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -1077,7 +1077,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/62-18713114/52-bocombra-park/",
                              "homesNiAgent":  true,
-                             "price":  "£350,000",
+                             "price":  "Ã‚Â£350,000",
                              "developers":  "Bocombra Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -1108,7 +1108,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/62-19169194/153-bracken-wood/",
                              "homesNiAgent":  true,
-                             "price":  "£247,500",
+                             "price":  "Ã‚Â£247,500",
                              "developers":  "Sustar Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -1139,7 +1139,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballymoney/11-MBL670774/site-59-bravallen-crescent/",
                              "homesNiAgent":  true,
-                             "price":  "£249,950 to £284,950",
+                             "price":  "Ã‚Â£249,950 to Ã‚Â£284,950",
                              "developers":  "Torra Homes",
                              "developerOrgs":  [
                                                    {
@@ -1170,7 +1170,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/warrenpoint/3-HXO250065/3-bridgeford/",
                              "homesNiAgent":  true,
-                             "price":  "£399,950 to £650,000",
+                             "price":  "Ã‚Â£399,950 to Ã‚Â£650,000",
                              "developers":  "Tinnelly Construction",
                              "developerOrgs":  [
                                                    {
@@ -1205,7 +1205,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballycarry/69-CAR260125/site-19---the-lislaynan/",
                              "homesNiAgent":  true,
-                             "price":  "£319,950",
+                             "price":  "Ã‚Â£319,950",
                              "developers":  "Island Homes",
                              "developerOrgs":  [
                                                    {
@@ -1267,7 +1267,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/omagh/41-1060681/50/",
                              "homesNiAgent":  true,
-                             "price":  "£182,500 to £399,950",
+                             "price":  "Ã‚Â£182,500 to Ã‚Â£399,950",
                              "developers":  "Fermac Properties",
                              "developerOrgs":  [
                                                    {
@@ -1337,7 +1337,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lurgan/86-19727289/carrickvale/",
                              "homesNiAgent":  true,
-                             "price":  "£320,000",
+                             "price":  "Ã‚Â£320,000",
                              "developers":  "O\u0027Kane Group Ltd",
                              "developerOrgs":  [
                                                    {
@@ -1434,7 +1434,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dundonald/3-UNT260080/site-74/",
                              "homesNiAgent":  true,
-                             "price":  "£295,000 to £415,000",
+                             "price":  "Ã‚Â£295,000 to Ã‚Â£415,000",
                              "developers":  "Alskea Ltd",
                              "developerOrgs":  [
                                                    {
@@ -1465,7 +1465,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£395,000",
+                             "price":  "Ã‚Â£395,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -1496,7 +1496,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£220,950 to £289,950",
+                             "price":  "Ã‚Â£220,950 to Ã‚Â£289,950",
                              "developers":  "Lagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -1527,7 +1527,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/119-19630095/site-1-the-deramore-2-castlegate/",
                              "homesNiAgent":  true,
-                             "price":  "£286,450 to £390,000",
+                             "price":  "Ã‚Â£286,450 to Ã‚Â£390,000",
                              "developers":  "Simpson Developments Ltd; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -1562,7 +1562,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/fintona/150-WATT0A602/2-castletown-brae/",
                              "homesNiAgent":  false,
-                             "price":  "£180,000 to £190,000",
+                             "price":  "Ã‚Â£180,000 to Ã‚Â£190,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -1593,7 +1593,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/armagh/2-ARM19960/site-32-cavanacaw-grange/",
                              "homesNiAgent":  true,
-                             "price":  "£359,000",
+                             "price":  "Ã‚Â£359,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -1624,7 +1624,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/strangford/19-ARFARF6084/site-5-ceol-na-mara/",
                              "homesNiAgent":  true,
-                             "price":  "£295,000 to £385,000",
+                             "price":  "Ã‚Â£295,000 to Ã‚Â£385,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -1655,7 +1655,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/8-19778608/58-charles-drive/",
                              "homesNiAgent":  true,
-                             "price":  "£224,950",
+                             "price":  "Ã‚Â£224,950",
                              "developers":  "Hagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -1683,10 +1683,10 @@
                              "homesAvailable":  8,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/lisburn-city-centre/3-LBR260727/",
                              "homesNiAgent":  true,
-                             "price":  "£267,500 to £375,000",
+                             "price":  "Ã‚Â£267,500 to Ã‚Â£375,000",
                              "developers":  "Lagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -1721,7 +1721,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lisburn/72-19586356/18a-glenavy-road/",
                              "homesNiAgent":  true,
-                             "price":  "£235,000 to £405,000",
+                             "price":  "Ã‚Â£235,000 to Ã‚Â£405,000",
                              "developers":  "Porter \u0026 Co",
                              "developerOrgs":  [
                                                    {
@@ -1783,7 +1783,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£270,000 to £350,000",
+                             "price":  "Ã‚Â£270,000 to Ã‚Â£350,000",
                              "developers":  "Marald Prime Developments Limited",
                              "developerOrgs":  [
                                                    {
@@ -1814,7 +1814,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£255,000",
+                             "price":  "Ã‚Â£255,000",
                              "developers":  "Simpson Developments Ltd; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -1849,7 +1849,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/castlecaulfield/138-TH91851/3-church-heights/",
                              "homesNiAgent":  true,
-                             "price":  "£239,950",
+                             "price":  "Ã‚Â£239,950",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -1880,7 +1880,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/cookstown/175-1136821/29/",
                              "homesNiAgent":  true,
-                             "price":  "£147,000 to £224,950",
+                             "price":  "Ã‚Â£147,000 to Ã‚Â£224,950",
                              "developers":  "John J Donnelly",
                              "developerOrgs":  [
                                                    {
@@ -1911,7 +1911,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/tobermore/6-BCMBCM3159/site-1-church-view/",
                              "homesNiAgent":  true,
-                             "price":  "£212,500",
+                             "price":  "Ã‚Â£212,500",
                              "developers":  "SB Contracts Ltd",
                              "developerOrgs":  [
                                                    {
@@ -1942,7 +1942,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/bangor-(ards-and-north-down)/3-HLW260016/apt-13/",
                              "homesNiAgent":  true,
-                             "price":  "£185,000 to £195,000",
+                             "price":  "Ã‚Â£185,000 to Ã‚Â£195,000",
                              "developers":  "BlueHouse Development Ltd",
                              "developerOrgs":  [
                                                    {
@@ -1973,7 +1973,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/18-CNRCJBE3225/1-clarebane/",
                              "homesNiAgent":  true,
-                             "price":  "£279,950 to £289,950",
+                             "price":  "Ã‚Â£279,950 to Ã‚Â£289,950",
                              "developers":  "Antrim Construction Company Limited",
                              "developerOrgs":  [
                                                    {
@@ -2043,7 +2043,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/3-LBR260745/site-67-the-mcbride/",
                              "homesNiAgent":  true,
-                             "price":  "£217,500 to £349,950",
+                             "price":  "Ã‚Â£217,500 to Ã‚Â£349,950",
                              "developers":  "Braidwater",
                              "developerOrgs":  [
                                                    {
@@ -2074,7 +2074,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dromore/130-1060957/6/",
                              "homesNiAgent":  true,
-                             "price":  "£295,000",
+                             "price":  "Ã‚Â£295,000",
                              "developers":  "Arona Developments",
                              "developerOrgs":  [
                                                    {
@@ -2140,7 +2140,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/coleraine/140-18610005/apt-6-castlerock-road/",
                              "homesNiAgent":  true,
-                             "price":  "£219,950",
+                             "price":  "Ã‚Â£219,950",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -2175,7 +2175,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/l\u0027derry/176-1077356/37/",
                              "homesNiAgent":  true,
-                             "price":  "£224,950",
+                             "price":  "Ã‚Â£224,950",
                              "developers":  "Jamse Construction Ltd",
                              "developerOrgs":  [
                                                    {
@@ -2214,7 +2214,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/cookstown/175-1136371/175-1136371/",
                              "homesNiAgent":  true,
-                             "price":  "£245,000",
+                             "price":  "Ã‚Â£245,000",
                              "developers":  "J\u0026A Construction (NI) Ltd",
                              "developerOrgs":  [
                                                    {
@@ -2249,7 +2249,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/omagh/2-OMA18256/site-4-corradinna-lane/",
                              "homesNiAgent":  true,
-                             "price":  "£360,000",
+                             "price":  "Ã‚Â£360,000",
                              "developers":  "Corra Contracts Limited",
                              "developerOrgs":  [
                                                    {
@@ -2288,7 +2288,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/69-GLE260837/site-21/",
                              "homesNiAgent":  true,
-                             "price":  "£339,000 to £357,500",
+                             "price":  "Ã‚Â£339,000 to Ã‚Â£357,500",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -2323,7 +2323,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/3-LBR250855/site-15/",
                              "homesNiAgent":  true,
-                             "price":  "£335,000",
+                             "price":  "Ã‚Â£335,000",
                              "developers":  "Clady Properties",
                              "developerOrgs":  [
                                                    {
@@ -2354,7 +2354,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/bangor/69-BNI260117/site-52--the-killaire/",
                              "homesNiAgent":  true,
-                             "price":  "£450,000",
+                             "price":  "Ã‚Â£450,000",
                              "developers":  "McAlorum Group",
                              "developerOrgs":  [
                                                    {
@@ -2385,7 +2385,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/draperstown/125-PAUB674072/crockmore-view/",
                              "homesNiAgent":  true,
-                             "price":  "£224,950",
+                             "price":  "Ã‚Â£224,950",
                              "developers":  "NK Construction",
                              "developerOrgs":  [
                                                    {
@@ -2416,7 +2416,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/l\u0027derry/176-1069694/25a/",
                              "homesNiAgent":  true,
-                             "price":  "£445,000",
+                             "price":  "Ã‚Â£445,000",
                              "developers":  "FYTH Ltd; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -2455,7 +2455,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£450,000",
+                             "price":  "Ã‚Â£450,000",
                              "developers":  "Warren Properties",
                              "developerOrgs":  [
                                                    {
@@ -2486,7 +2486,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£499,950",
+                             "price":  "Ã‚Â£499,950",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -2517,7 +2517,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/armagh/62-18796570/site-27-deanery-demesne/",
                              "homesNiAgent":  true,
-                             "price":  "£327,500",
+                             "price":  "Ã‚Â£327,500",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -2579,7 +2579,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/co.-fermanagh/35-MFC854921-842452/3-derryad-country-park/",
                              "homesNiAgent":  true,
-                             "price":  "£325,000 to £525,000",
+                             "price":  "Ã‚Â£325,000 to Ã‚Â£525,000",
                              "developers":  "Stubbs Construction",
                              "developerOrgs":  [
                                                    {
@@ -2610,7 +2610,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/craigavon/130-1044684/104/",
                              "homesNiAgent":  true,
-                             "price":  "£220,000 to £297,500",
+                             "price":  "Ã‚Â£220,000 to Ã‚Â£297,500",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -2638,10 +2638,10 @@
                              "homesAvailable":  3,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/antrim-town/3-LBR260779/",
                              "homesNiAgent":  true,
-                             "price":  "£267,500 to £312,500",
+                             "price":  "Ã‚Â£267,500 to Ã‚Â£312,500",
                              "developers":  "Toland House Properties Ltd",
                              "developerOrgs":  [
                                                    {
@@ -2672,7 +2672,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/craigavon-area/90-196153/site-303-drumnagoon-park/",
                              "homesNiAgent":  true,
-                             "price":  "£237,500 to £265,000",
+                             "price":  "Ã‚Â£237,500 to Ã‚Â£265,000",
                              "developers":  "Windsor Developments",
                              "developerOrgs":  [
                                                    {
@@ -2703,7 +2703,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lisnarick/104-1085296/13/",
                              "homesNiAgent":  true,
-                             "price":  "£237,500",
+                             "price":  "Ã‚Â£237,500",
                              "developers":  "Speer Homes",
                              "developerOrgs":  [
                                                    {
@@ -2734,7 +2734,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dunadry/18-CNRCJBE2337/1-dunadry-lane/",
                              "homesNiAgent":  true,
-                             "price":  "£749,950",
+                             "price":  "Ã‚Â£749,950",
                              "developers":  "Kilmoon Trading",
                              "developerOrgs":  [
                                                    {
@@ -2769,7 +2769,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£285,000",
+                             "price":  "Ã‚Â£285,000",
                              "developers":  "Colm Meehan \u0026 Co Ltd",
                              "developerOrgs":  [
                                                    {
@@ -2800,7 +2800,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/magherafelt/6-BHO1054831/the-read-plot-25-eden-park/",
                              "homesNiAgent":  true,
-                             "price":  "£294,950 to £299,950",
+                             "price":  "Ã‚Â£294,950 to Ã‚Â£299,950",
                              "developers":  "FP McCann",
                              "developerOrgs":  [
                                                    {
@@ -2866,7 +2866,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/banbridge/3-LBR260871/site-169/",
                              "homesNiAgent":  true,
-                             "price":  "£519,950",
+                             "price":  "Ã‚Â£519,950",
                              "developers":  "Lotus Homes",
                              "developerOrgs":  [
                                                    {
@@ -2901,7 +2901,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballynahinch/1-18746050/site-57-edengrove/",
                              "homesNiAgent":  true,
-                             "price":  "£300,000 to £335,000",
+                             "price":  "Ã‚Â£300,000 to Ã‚Â£335,000",
                              "developers":  "Beechview Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -2936,7 +2936,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/69-GLE240277/site-15-the-dixon/",
                              "homesNiAgent":  true,
-                             "price":  "£252,500 to £350,000",
+                             "price":  "Ã‚Â£252,500 to Ã‚Â£350,000",
                              "developers":  "Blue Horizon Developments",
                              "developerOrgs":  [
                                                    {
@@ -2971,7 +2971,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/comber/3-NTN260190/site-245/",
                              "homesNiAgent":  true,
-                             "price":  "£269,950 to £332,950",
+                             "price":  "Ã‚Â£269,950 to Ã‚Â£332,950",
                              "developers":  "Antrim Construction Company Limited; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -3010,7 +3010,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ormeau/70-GOCGOC11503/site-3-essex-mews/",
                              "homesNiAgent":  true,
-                             "price":  "£157,500 to £189,950",
+                             "price":  "Ã‚Â£157,500 to Ã‚Â£189,950",
                              "developers":  "BlueHouse Development Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3041,7 +3041,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/magherafelt/6-BHO4891/site-4-fair-green-view/",
                              "homesNiAgent":  true,
-                             "price":  "£344,950",
+                             "price":  "Ã‚Â£344,950",
                              "developers":  "Mullaghboy Construction Co Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3072,7 +3072,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lisburn-city-centre/3-LBR261057/site-18-the-farnham/",
                              "homesNiAgent":  true,
-                             "price":  "£525,000",
+                             "price":  "Ã‚Â£525,000",
                              "developers":  "Blue Horizon Developments",
                              "developerOrgs":  [
                                                    {
@@ -3103,7 +3103,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/malone/70-GOCGOC11629/apt-9-fairmont-apartments/",
                              "homesNiAgent":  true,
-                             "price":  "£300,000",
+                             "price":  "Ã‚Â£300,000",
                              "developers":  "JPM Contracts Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3134,7 +3134,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£217,500 to £229,950",
+                             "price":  "Ã‚Â£217,500 to Ã‚Â£229,950",
                              "developers":  "Seventh Developments",
                              "developerOrgs":  [
                                                    {
@@ -3169,7 +3169,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£330,000",
+                             "price":  "Ã‚Â£330,000",
                              "developers":  "HNA Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3200,7 +3200,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/holywood/18-CNRCJBE3154/1-farmhill-mews/",
                              "homesNiAgent":  true,
-                             "price":  "£1,250,000 to £1,400,000",
+                             "price":  "Ã‚Â£1,250,000 to Ã‚Â£1,400,000",
                              "developers":  "Andrew Dunlop Homes",
                              "developerOrgs":  [
                                                    {
@@ -3235,7 +3235,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dundonald/3-UNT260307/site-36/",
                              "homesNiAgent":  true,
-                             "price":  "£480,000 to £485,000",
+                             "price":  "Ã‚Â£480,000 to Ã‚Â£485,000",
                              "developers":  "Strand Homes",
                              "developerOrgs":  [
                                                    {
@@ -3270,7 +3270,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballycastle/80-1093152/9/",
                              "homesNiAgent":  true,
-                             "price":  "£225,000 to £365,000",
+                             "price":  "Ã‚Â£225,000 to Ã‚Â£365,000",
                              "developers":  "McAlister Builders Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3301,7 +3301,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/killough/19-ARFARF5916/6-fishermans-row/",
                              "homesNiAgent":  true,
-                             "price":  "£350,000",
+                             "price":  "Ã‚Â£350,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -3332,7 +3332,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/carrickfergus/3-NBF260279/site-26/",
                              "homesNiAgent":  true,
-                             "price":  "£325,000 to £430,000",
+                             "price":  "Ã‚Â£325,000 to Ã‚Â£430,000",
                              "developers":  "Ballygood Estates",
                              "developerOrgs":  [
                                                    {
@@ -3364,10 +3364,10 @@
                              "homesAvailable":  5,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/doagh/69-GLE260797/",
                              "homesNiAgent":  true,
-                             "price":  "£268,500 to £284,950",
+                             "price":  "Ã‚Â£268,500 to Ã‚Â£284,950",
                              "developers":  "Antrim Construction Company Limited; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -3402,7 +3402,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/moira/130-1137540/10/",
                              "homesNiAgent":  true,
-                             "price":  "£475,000",
+                             "price":  "Ã‚Â£475,000",
                              "developers":  "Gilmore Developments",
                              "developerOrgs":  [
                                                    {
@@ -3433,7 +3433,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballymoney/12-bcv805060/site-85-the-crozier-foxleigh-meadow/",
                              "homesNiAgent":  true,
-                             "price":  "£199,950 to £204,950",
+                             "price":  "Ã‚Â£199,950 to Ã‚Â£204,950",
                              "developers":  "Hagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -3468,7 +3468,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballymena/149-986785/7-7/",
                              "homesNiAgent":  true,
-                             "price":  "£219,950 to £269,950",
+                             "price":  "Ã‚Â£219,950 to Ã‚Â£269,950",
                              "developers":  "Glenoak Limited",
                              "developerOrgs":  [
                                                    {
@@ -3503,7 +3503,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£229,995 to £334,995",
+                             "price":  "Ã‚Â£229,995 to Ã‚Â£334,995",
                              "developers":  "Steadland Ltd; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -3538,7 +3538,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£350,000",
+                             "price":  "Ã‚Â£350,000",
                              "developers":  "Sheriff Homes",
                              "developerOrgs":  [
                                                    {
@@ -3569,7 +3569,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/cookstown/175-1116340/119/",
                              "homesNiAgent":  true,
-                             "price":  "£262,500 to £330,000",
+                             "price":  "Ã‚Â£262,500 to Ã‚Â£330,000",
                              "developers":  "N \u0026 R Devine Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3604,7 +3604,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/maghera/6-BCMBCM3130/site-2-glen-green/",
                              "homesNiAgent":  true,
-                             "price":  "£449,950 to £519,950",
+                             "price":  "Ã‚Â£449,950 to Ã‚Â£519,950",
                              "developers":  "Modern Spec Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3635,7 +3635,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lurgan/2-POR16143/glenavon-avenue---site-2/",
                              "homesNiAgent":  true,
-                             "price":  "£219,950 to £239,500",
+                             "price":  "Ã‚Â£219,950 to Ã‚Â£239,500",
                              "developers":  "BCL Properties",
                              "developerOrgs":  [
                                                    {
@@ -3670,7 +3670,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/omagh/2-OMA16157/127-glencam-road/",
                              "homesNiAgent":  true,
-                             "price":  "£370,000",
+                             "price":  "Ã‚Â£370,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -3698,10 +3698,10 @@
                              "homesAvailable":  1,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/ballymena/125-PAUB674058/",
                              "homesNiAgent":  true,
-                             "price":  "£269,950",
+                             "price":  "Ã‚Â£269,950",
                              "developers":  "JFM Construction Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3736,7 +3736,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ormeau/3-LBR261385/apartment-22/",
                              "homesNiAgent":  true,
-                             "price":  "£210,000 to £350,000",
+                             "price":  "Ã‚Â£210,000 to Ã‚Â£350,000",
                              "developers":  "Alskea Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3767,7 +3767,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/newbuildings/2-DER18077/site-47-gortin-meadows/",
                              "homesNiAgent":  false,
-                             "price":  "£155,000",
+                             "price":  "Ã‚Â£155,000",
                              "developers":  "Billy Henderson Properties",
                              "developerOrgs":  [
                                                    {
@@ -3798,7 +3798,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/hillsborough/3-LBR260129/18-governors-gate-demesne/",
                              "homesNiAgent":  true,
-                             "price":  "£349,950 to £575,000",
+                             "price":  "Ã‚Â£349,950 to Ã‚Â£575,000",
                              "developers":  "Porter \u0026 Co",
                              "developerOrgs":  [
                                                    {
@@ -3829,7 +3829,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portavogie/1-18737786/32-gowland-grove/",
                              "homesNiAgent":  true,
-                             "price":  "£250,000",
+                             "price":  "Ã‚Â£250,000",
                              "developers":  "Mountainberg Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3864,7 +3864,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/bangor/13-TRHTRH102439/site-9-gransha-lane/",
                              "homesNiAgent":  true,
-                             "price":  "£465,000",
+                             "price":  "Ã‚Â£465,000",
                              "developers":  "Old Belfast Road Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3892,10 +3892,10 @@
                              "homesAvailable":  4,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/ballymoney/80-1088502/",
                              "homesNiAgent":  true,
-                             "price":  "£225,000 to £260,000",
+                             "price":  "Ã‚Â£225,000 to Ã‚Â£260,000",
                              "developers":  "McAlister Builders Ltd",
                              "developerOrgs":  [
                                                    {
@@ -3926,7 +3926,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/coleraine/12-1033692/site-3-greystone-gardens/",
                              "homesNiAgent":  true,
-                             "price":  "£260,000",
+                             "price":  "Ã‚Â£260,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -3954,10 +3954,10 @@
                              "homesAvailable":  7,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/carrickfergus/69-CAR260494/",
                              "homesNiAgent":  true,
-                             "price":  "£304,950 to £385,000",
+                             "price":  "Ã‚Â£304,950 to Ã‚Â£385,000",
                              "developers":  "Windsor Developments",
                              "developerOrgs":  [
                                                    {
@@ -3988,7 +3988,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/119-19822062/site-39-the-arlington-8-harbison-park/",
                              "homesNiAgent":  true,
-                             "price":  "£255,000",
+                             "price":  "Ã‚Â£255,000",
                              "developers":  "Orrson Homes",
                              "developerOrgs":  [
                                                    {
@@ -4019,7 +4019,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/greenisland/3-LBR260780/site-186-the-windward/",
                              "homesNiAgent":  true,
-                             "price":  "£257,500 to £412,500",
+                             "price":  "Ã‚Â£257,500 to Ã‚Â£412,500",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -4050,7 +4050,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lurgan,-craigavon/47-1059307/30/",
                              "homesNiAgent":  false,
-                             "price":  "£216,250",
+                             "price":  "Ã‚Â£216,250",
                              "developers":  "L Jay Properties",
                              "developerOrgs":  [
                                                    {
@@ -4081,7 +4081,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/bangor/18-CNRCJBE3078/210-helens-wood/",
                              "homesNiAgent":  true,
-                             "price":  "£270,000 to £275,000",
+                             "price":  "Ã‚Â£270,000 to Ã‚Â£275,000",
                              "developers":  "Lagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -4116,7 +4116,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/coleraine/38-pco811627/344-henley-hall/",
                              "homesNiAgent":  true,
-                             "price":  "£300,000 to £330,000",
+                             "price":  "Ã‚Â£300,000 to Ã‚Â£330,000",
                              "developers":  "DJ Lockhart Limited",
                              "developerOrgs":  [
                                                    {
@@ -4151,7 +4151,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/donaghadee/1-18482963/site-200-high-trees-including-sunroom/",
                              "homesNiAgent":  true,
-                             "price":  "£237,500 to £440,000",
+                             "price":  "Ã‚Â£237,500 to Ã‚Â£440,000",
                              "developers":  "Strand Homes",
                              "developerOrgs":  [
                                                    {
@@ -4182,7 +4182,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/omagh/41-1131246/46/",
                              "homesNiAgent":  true,
-                             "price":  "£250,000",
+                             "price":  "Ã‚Â£250,000",
                              "developers":  "Calbro Construction (Ni) Ltd",
                              "developerOrgs":  [
                                                    {
@@ -4221,7 +4221,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£234,950",
+                             "price":  "Ã‚Â£234,950",
                              "developers":  "Buildcon Homes",
                              "developerOrgs":  [
                                                    {
@@ -4256,7 +4256,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lisburn-city/13-TRLISTRLIS103718/apt-10-hillsborough-road-apartments/",
                              "homesNiAgent":  true,
-                             "price":  "£375,000",
+                             "price":  "Ã‚Â£375,000",
                              "developers":  "WGK Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -4295,7 +4295,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/magherafelt/6-BHO1054541/plot-2-hillside-manor/",
                              "homesNiAgent":  true,
-                             "price":  "£277,950 to £430,000",
+                             "price":  "Ã‚Â£277,950 to Ã‚Â£430,000",
                              "developers":  "JFM Construction Ltd",
                              "developerOrgs":  [
                                                    {
@@ -4330,7 +4330,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballynahinch/18-CNRCJBE2978/1-hinchfields/",
                              "homesNiAgent":  true,
-                             "price":  "£195,000 to £349,500",
+                             "price":  "Ã‚Â£195,000 to Ã‚Â£349,500",
                              "developers":  "Dunlop Homes",
                              "developerOrgs":  [
                                                    {
@@ -4365,7 +4365,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dundonald/69-BAL260258/site-40-the-gatton/",
                              "homesNiAgent":  true,
-                             "price":  "£340,000 to £362,500",
+                             "price":  "Ã‚Â£340,000 to Ã‚Â£362,500",
                              "developers":  "Lagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -4400,7 +4400,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/moy/2-ARM19679/site-13-horsefair-meadows/",
                              "homesNiAgent":  true,
-                             "price":  "£450,000",
+                             "price":  "Ã‚Â£450,000",
                              "developers":  "Kilmore Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -4462,7 +4462,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£357,500",
+                             "price":  "Ã‚Â£357,500",
                              "developers":  "Farland Developments",
                              "developerOrgs":  [
                                                    {
@@ -4493,7 +4493,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/mallusk/3-LBR260822/site-93/",
                              "homesNiAgent":  true,
-                             "price":  "£337,500",
+                             "price":  "Ã‚Â£337,500",
                              "developers":  "South Bank Square Developments",
                              "developerOrgs":  [
                                                    {
@@ -4528,7 +4528,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dollingstown/47-973837/10/",
                              "homesNiAgent":  true,
-                             "price":  "£272,500 to £342,500",
+                             "price":  "Ã‚Â£272,500 to Ã‚Â£342,500",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -4563,7 +4563,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/omagh/41-1077546/29/",
                              "homesNiAgent":  true,
-                             "price":  "£224,950",
+                             "price":  "Ã‚Â£224,950",
                              "developers":  "Newpark Homes; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -4602,7 +4602,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£350,000",
+                             "price":  "Ã‚Â£350,000",
                              "developers":  "LS Construction Limited",
                              "developerOrgs":  [
                                                    {
@@ -4633,7 +4633,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£510,000",
+                             "price":  "Ã‚Â£510,000",
                              "developers":  "Kenny Homes",
                              "developerOrgs":  [
                                                    {
@@ -4664,7 +4664,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballymoney/11-MBL670858/site-4-knock-grove/",
                              "homesNiAgent":  true,
-                             "price":  "£234,950 to £364,950",
+                             "price":  "Ã‚Â£234,950 to Ã‚Â£364,950",
                              "developers":  "KMBC",
                              "developerOrgs":  [
                                                    {
@@ -4695,7 +4695,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dervock/10-1025897/1-\u0026-2-knockanboy-lane/",
                              "homesNiAgent":  true,
-                             "price":  "£250,000",
+                             "price":  "Ã‚Â£250,000",
                              "developers":  "G Neely Construction Ltd",
                              "developerOrgs":  [
                                                    {
@@ -4730,7 +4730,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/swatragh/11-MBL670870/the-davitt/",
                              "homesNiAgent":  true,
-                             "price":  "£234,950 to £380,000",
+                             "price":  "Ã‚Â£234,950 to Ã‚Â£380,000",
                              "developers":  "KMBC",
                              "developerOrgs":  [
                                                    {
@@ -4792,7 +4792,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/belvoir/3-LBR260689/site-1-the-oakwood/",
                              "homesNiAgent":  true,
-                             "price":  "£495,000 to £865,000",
+                             "price":  "Ã‚Â£495,000 to Ã‚Â£865,000",
                              "developers":  "Alskea Ltd",
                              "developerOrgs":  [
                                                    {
@@ -4823,7 +4823,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lisburn/137-101253014076/site-10/",
                              "homesNiAgent":  true,
-                             "price":  "£527,500",
+                             "price":  "Ã‚Â£527,500",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -4858,7 +4858,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/four-winds/123-AMPMAMPM4490/the-beaufort-site-151-lancaster-park/",
                              "homesNiAgent":  true,
-                             "price":  "£352,500 to £510,000",
+                             "price":  "Ã‚Â£352,500 to Ã‚Â£510,000",
                              "developers":  "Fraser Millar",
                              "developerOrgs":  [
                                                    {
@@ -4893,7 +4893,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lurgan/130-1125504/31/",
                              "homesNiAgent":  true,
-                             "price":  "£245,000 to £295,000",
+                             "price":  "Ã‚Â£245,000 to Ã‚Â£295,000",
                              "developers":  "Acorn NI Ltd",
                              "developerOrgs":  [
                                                    {
@@ -4925,10 +4925,10 @@
                              "homesAvailable":  1,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/craigavon/135-18850118/",
                              "homesNiAgent":  true,
-                             "price":  "£285,000",
+                             "price":  "Ã‚Â£285,000",
                              "developers":  "John Hall \u0026 Sons",
                              "developerOrgs":  [
                                                    {
@@ -4959,7 +4959,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/l\u0027derry/176-984563/32/",
                              "homesNiAgent":  true,
-                             "price":  "£207,500 to £309,950",
+                             "price":  "Ã‚Â£207,500 to Ã‚Â£309,950",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -4990,7 +4990,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/castlecaulfield/126-1072196/9/",
                              "homesNiAgent":  true,
-                             "price":  "£212,950 to £234,950",
+                             "price":  "Ã‚Â£212,950 to Ã‚Â£234,950",
                              "developers":  "Hagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -5025,7 +5025,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/coleraine/12-1017489/no-4-lodge-gardens/",
                              "homesNiAgent":  true,
-                             "price":  "£230,000 to £275,000",
+                             "price":  "Ã‚Â£230,000 to Ã‚Â£275,000",
                              "developers":  "Mount Falcon Estates",
                              "developerOrgs":  [
                                                    {
@@ -5053,10 +5053,10 @@
                              "homesAvailable":  2,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/lurgan/62-19004416/",
                              "homesNiAgent":  true,
-                             "price":  "£310,000",
+                             "price":  "Ã‚Â£310,000",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -5091,7 +5091,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/cookstown/175-1138787/52-loranvale/",
                              "homesNiAgent":  true,
-                             "price":  "£239,500",
+                             "price":  "Ã‚Â£239,500",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -5122,7 +5122,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/omagh/2-OMA14147/119-loughmuck-meadows/",
                              "homesNiAgent":  true,
-                             "price":  "£220,000",
+                             "price":  "Ã‚Â£220,000",
                              "developers":  "Corra Contracts Limited",
                              "developerOrgs":  [
                                                    {
@@ -5223,7 +5223,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£200,000 to £289,000",
+                             "price":  "Ã‚Â£200,000 to Ã‚Â£289,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -5254,7 +5254,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/kinallen/22-FDPFDP10039/residential-development-land/",
                              "homesNiAgent":  true,
-                             "price":  "£250,000 to £345,000",
+                             "price":  "Ã‚Â£250,000 to Ã‚Â£345,000",
                              "developers":  "Granite Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5316,7 +5316,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/jordanstown/3-LBR250858/site-33/",
                              "homesNiAgent":  true,
-                             "price":  "£327,500",
+                             "price":  "Ã‚Â£327,500",
                              "developers":  "Nickell \u0026 Richmond Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5347,7 +5347,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£202,000",
+                             "price":  "Ã‚Â£202,000",
                              "developers":  "O\u0027Hagan Group Limited",
                              "developerOrgs":  [
                                                    {
@@ -5379,10 +5379,10 @@
                              "homesAvailable":  9,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR261149/",
                              "homesNiAgent":  true,
-                             "price":  "£230,000 to £425,000",
+                             "price":  "Ã‚Â£230,000 to Ã‚Â£425,000",
                              "developers":  "Fraser Partners",
                              "developerOrgs":  [
                                                    {
@@ -5410,10 +5410,10 @@
                              "homesAvailable":  5,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
+                             "onHomesNi":  true,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£370,000 to £387,950",
+                             "price":  "Ã‚Â£370,000 to Ã‚Â£387,950",
                              "developers":  "Fraser Millar",
                              "developerOrgs":  [
                                                    {
@@ -5448,7 +5448,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£305,000",
+                             "price":  "Ã‚Â£305,000",
                              "developers":  "South Bank Square Developments",
                              "developerOrgs":  [
                                                    {
@@ -5541,7 +5541,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£235,000",
+                             "price":  "Ã‚Â£235,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -5572,7 +5572,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dungannon/130-1069844/18-millbrook/",
                              "homesNiAgent":  true,
-                             "price":  "£229,950 to £235,000",
+                             "price":  "Ã‚Â£229,950 to Ã‚Â£235,000",
                              "developers":  "N \u0026 R Devine Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5607,7 +5607,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dundonald/3-UNT240118/site-25/",
                              "homesNiAgent":  true,
-                             "price":  "£225,000 to £399,000",
+                             "price":  "Ã‚Â£225,000 to Ã‚Â£399,000",
                              "developers":  "Lagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -5639,10 +5639,10 @@
                              "homesAvailable":  1,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/dundonald/69-BAL260106/",
                              "homesNiAgent":  true,
-                             "price":  "£349,950",
+                             "price":  "Ã‚Â£349,950",
                              "developers":  "Antrim Construction Company Limited; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -5677,7 +5677,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/holywood/5-RBWNRBWN4816/moor-park/",
                              "homesNiAgent":  true,
-                             "price":  "£1,165,000",
+                             "price":  "Ã‚Â£1,165,000",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -5712,7 +5712,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lisburn-city/13-TRLISTRLIS103687/site-1-moores-hall/",
                              "homesNiAgent":  true,
-                             "price":  "£375,000 to £550,000",
+                             "price":  "Ã‚Â£375,000 to Ã‚Â£550,000",
                              "developers":  "WGK Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5743,7 +5743,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£295,000",
+                             "price":  "Ã‚Â£295,000",
                              "developers":  "PMR Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5774,7 +5774,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/3-LBR261131/site-87-style-i/",
                              "homesNiAgent":  true,
-                             "price":  "£269,950 to £325,000",
+                             "price":  "Ã‚Â£269,950 to Ã‚Â£325,000",
                              "developers":  "Ballygood Estates",
                              "developerOrgs":  [
                                                    {
@@ -5806,10 +5806,10 @@
                              "homesAvailable":  3,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR260551/",
                              "homesNiAgent":  true,
-                             "price":  "£212,200 to £492,950",
+                             "price":  "Ã‚Â£212,200 to Ã‚Â£492,950",
                              "developers":  "Lotus Homes",
                              "developerOrgs":  [
                                                    {
@@ -5837,10 +5837,10 @@
                              "homesAvailable":  3,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/newtownards/3-NTN260421/",
                              "homesNiAgent":  true,
-                             "price":  "£439,500",
+                             "price":  "Ã‚Â£439,500",
                              "developers":  "Dingles Builders (NI) Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5875,7 +5875,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£215,000 to £220,000",
+                             "price":  "Ã‚Â£215,000 to Ã‚Â£220,000",
                              "developers":  "Racarbry Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5965,10 +5965,10 @@
                              "homesAvailable":  2,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/omagh-area/95-200028/",
                              "homesNiAgent":  true,
-                             "price":  "£224,950 to £325,000",
+                             "price":  "Ã‚Â£224,950 to Ã‚Â£325,000",
                              "developers":  "S \u0026 DS Construction Ltd",
                              "developerOrgs":  [
                                                    {
@@ -5999,7 +5999,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portstewart/10-874030/4-nursery-mews/",
                              "homesNiAgent":  true,
-                             "price":  "£695,000",
+                             "price":  "Ã‚Â£695,000",
                              "developers":  "O\u0027Kane Group Ltd",
                              "developerOrgs":  [
                                                    {
@@ -6065,7 +6065,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/antrim-town/3-LBR260415/site-127/",
                              "homesNiAgent":  true,
-                             "price":  "£299,950 to £385,000",
+                             "price":  "Ã‚Â£299,950 to Ã‚Â£385,000",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -6100,7 +6100,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/craigavon/130-1125854/7/",
                              "homesNiAgent":  true,
-                             "price":  "£222,500 to £272,500",
+                             "price":  "Ã‚Â£222,500 to Ã‚Â£272,500",
                              "developers":  "LS Construction Limited",
                              "developerOrgs":  [
                                                    {
@@ -6131,7 +6131,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballymoney/80-1135686/25/",
                              "homesNiAgent":  true,
-                             "price":  "£235,000",
+                             "price":  "Ã‚Â£235,000",
                              "developers":  "Lisbreen Builders",
                              "developerOrgs":  [
                                                    {
@@ -6162,7 +6162,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£359,950",
+                             "price":  "Ã‚Â£359,950",
                              "developers":  "LS Construction Limited",
                              "developerOrgs":  [
                                                    {
@@ -6224,7 +6224,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/downpatrick/19-ARFARF6109/the-belmont-park-lane/",
                              "homesNiAgent":  true,
-                             "price":  "£325,000",
+                             "price":  "Ã‚Â£325,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -6255,7 +6255,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portrush/10-872977/site-at-27-28-kerr-street/",
                              "homesNiAgent":  true,
-                             "price":  "£795,000 to £1,250,000",
+                             "price":  "Ã‚Â£795,000 to Ã‚Â£1,250,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -6286,7 +6286,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/coleraine/12-bcv804788/site-1/",
                              "homesNiAgent":  true,
-                             "price":  "£495,000",
+                             "price":  "Ã‚Â£495,000",
                              "developers":  "JSF Builders Ltd",
                              "developerOrgs":  [
                                                    {
@@ -6317,7 +6317,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£350,000 to £375,000",
+                             "price":  "Ã‚Â£350,000 to Ã‚Â£375,000",
                              "developers":  "Conlon Homes",
                              "developerOrgs":  [
                                                    {
@@ -6352,7 +6352,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/holywood/18-CNRCJBE2808/4-priory-gate/",
                              "homesNiAgent":  true,
-                             "price":  "£785,000",
+                             "price":  "Ã‚Â£785,000",
                              "developers":  "Mayfair Homes (NI) Ltd",
                              "developerOrgs":  [
                                                    {
@@ -6383,7 +6383,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/whitecross/161-182354/site-2-rathview-close/",
                              "homesNiAgent":  true,
-                             "price":  "£320,000",
+                             "price":  "Ã‚Â£320,000",
                              "developers":  "Casey Developments",
                              "developerOrgs":  [
                                                    {
@@ -6414,7 +6414,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/craigavon/130-1023527/28/",
                              "homesNiAgent":  true,
-                             "price":  "£225,000 to £305,000",
+                             "price":  "Ã‚Â£225,000 to Ã‚Â£305,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -6449,7 +6449,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/newtownards/9-JMDJMD24853/apt-108-regent-park/",
                              "homesNiAgent":  true,
-                             "price":  "£290,000 to £447,500",
+                             "price":  "Ã‚Â£290,000 to Ã‚Â£447,500",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -6484,7 +6484,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ardglass/19-ARFARF6095/24-ringfad-meadows/",
                              "homesNiAgent":  true,
-                             "price":  "£219,500",
+                             "price":  "Ã‚Â£219,500",
                              "developers":  "KAP Properties Limited / Cosy Group",
                              "developerOrgs":  [
                                                    {
@@ -6519,7 +6519,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballymoney/12-bcv885662/plot-20-type-c/",
                              "homesNiAgent":  true,
-                             "price":  "£195,000 to £215,000",
+                             "price":  "Ã‚Â£195,000 to Ã‚Â£215,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -6550,7 +6550,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£209,500 to £214,950",
+                             "price":  "Ã‚Â£209,500 to Ã‚Â£214,950",
                              "developers":  "Newpark Homes; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -6585,7 +6585,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/119-19768770/site-9-the-formby-6-robson-park-mews/",
                              "homesNiAgent":  true,
-                             "price":  "£219,950 to £295,000",
+                             "price":  "Ã‚Â£219,950 to Ã‚Â£295,000",
                              "developers":  "Nuport Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -6616,7 +6616,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portaferry/20-cnj867154/13-rockfield-park/",
                              "homesNiAgent":  false,
-                             "price":  "£225,000 to £249,950",
+                             "price":  "Ã‚Â£225,000 to Ã‚Â£249,950",
                              "developers":  "McCarthy Developments",
                              "developerOrgs":  [
                                                    {
@@ -6647,7 +6647,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portstewart/10-1030593/site-10-rockland-crescent/",
                              "homesNiAgent":  true,
-                             "price":  "£379,500",
+                             "price":  "Ã‚Â£379,500",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -6678,7 +6678,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portstewart/10-1030593/site-10-rockland-crescent/",
                              "homesNiAgent":  true,
-                             "price":  "£375,000",
+                             "price":  "Ã‚Â£375,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -6709,7 +6709,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/larne/5-RBWNRBWN5182/9-roddens-manor/",
                              "homesNiAgent":  true,
-                             "price":  "£385,000 to £410,000",
+                             "price":  "Ã‚Â£385,000 to Ã‚Â£410,000",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -6740,7 +6740,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/limavady/12-1057514/plot-162-snowdrop-roe-wood/",
                              "homesNiAgent":  true,
-                             "price":  "£215,000",
+                             "price":  "Ã‚Â£215,000",
                              "developers":  "Braidwater",
                              "developerOrgs":  [
                                                    {
@@ -6771,7 +6771,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£285,000",
+                             "price":  "Ã‚Â£285,000",
                              "developers":  "Cherrybrook Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -6802,7 +6802,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/kesh/35-MFC665874-646302/fern-rosscah-view/",
                              "homesNiAgent":  true,
-                             "price":  "£239,950 to £269,950",
+                             "price":  "Ã‚Â£239,950 to Ã‚Â£269,950",
                              "developers":  "Archdale Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -6841,7 +6841,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£219,950 to £239,950",
+                             "price":  "Ã‚Â£219,950 to Ã‚Â£239,950",
                              "developers":  "Chieftan Homes",
                              "developerOrgs":  [
                                                    {
@@ -6872,7 +6872,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/3-LBR251809/site-31/",
                              "homesNiAgent":  true,
-                             "price":  "£244,950 to £362,950",
+                             "price":  "Ã‚Â£244,950 to Ã‚Â£362,950",
                              "developers":  "Lotus Homes",
                              "developerOrgs":  [
                                                    {
@@ -6903,7 +6903,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/downpatrick/19-ARFARF6021/3-saul-green/",
                              "homesNiAgent":  true,
-                             "price":  "£275,000 to £325,000",
+                             "price":  "Ã‚Â£275,000 to Ã‚Â£325,000",
                              "developers":  "KAP Properties Limited / Cosy Group",
                              "developerOrgs":  [
                                                    {
@@ -7000,7 +7000,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/holywood/137-101253015082/20-seapark-lane/",
                              "homesNiAgent":  false,
-                             "price":  "£460,000",
+                             "price":  "Ã‚Â£460,000",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -7031,7 +7031,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dungannon/126-1136257/38/",
                              "homesNiAgent":  true,
-                             "price":  "£247,500",
+                             "price":  "Ã‚Â£247,500",
                              "developers":  "TG Developers Limited",
                              "developerOrgs":  [
                                                    {
@@ -7093,7 +7093,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portstewart/10-873142/18-six-west/",
                              "homesNiAgent":  true,
-                             "price":  "£465,000 to £744,950",
+                             "price":  "Ã‚Â£465,000 to Ã‚Â£744,950",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -7128,7 +7128,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/belfast-city-centre/13-TRLTRL101885/soho-foundry/",
                              "homesNiAgent":  true,
-                             "price":  "£159,950 to £189,950",
+                             "price":  "Ã‚Â£159,950 to Ã‚Â£189,950",
                              "developers":  "BlueHouse Development Ltd",
                              "developerOrgs":  [
                                                    {
@@ -7159,7 +7159,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/craigavon-area/90-143348/site-111-arlington-south-lake-park/",
                              "homesNiAgent":  true,
-                             "price":  "£235,000",
+                             "price":  "Ã‚Â£235,000",
                              "developers":  "Windsor Developments",
                              "developerOrgs":  [
                                                    {
@@ -7190,7 +7190,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballyclare/8-19626779/the-cairns-at-springwater/",
                              "homesNiAgent":  true,
-                             "price":  "£231,950 to £273,950",
+                             "price":  "Ã‚Â£231,950 to Ã‚Â£273,950",
                              "developers":  "Hagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -7225,7 +7225,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballywalter/69-NEW250253/site-176---the-driftwood/",
                              "homesNiAgent":  true,
-                             "price":  "£250,000",
+                             "price":  "Ã‚Â£250,000",
                              "developers":  "Dunlop Homes",
                              "developerOrgs":  [
                                                    {
@@ -7291,7 +7291,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/enniskillen/48-MCGO0A1472/station-house/",
                              "homesNiAgent":  true,
-                             "price":  "£219,950",
+                             "price":  "Ã‚Â£219,950",
                              "developers":  "Vision Estates Ltd",
                              "developerOrgs":  [
                                                    {
@@ -7326,7 +7326,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/mallusk/69-GLE260626/site-11a-the-albert/",
                              "homesNiAgent":  true,
-                             "price":  "£450,000",
+                             "price":  "Ã‚Â£450,000",
                              "developers":  "JSR Homes",
                              "developerOrgs":  [
                                                    {
@@ -7354,10 +7354,10 @@
                              "homesAvailable":  5,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/mallusk/69-GLE260807/",
                              "homesNiAgent":  true,
-                             "price":  "£300,000",
+                             "price":  "Ã‚Â£300,000",
                              "developers":  "JSR Homes",
                              "developerOrgs":  [
                                                    {
@@ -7388,7 +7388,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/richhill/2-ARM18564/site-1/",
                              "homesNiAgent":  true,
-                             "price":  "£295,000",
+                             "price":  "Ã‚Â£295,000",
                              "developers":  "Brookley Homes Ltd",
                              "developerOrgs":  [
                                                    {
@@ -7447,7 +7447,7 @@
                              "homesAvailable":  3,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
+                             "onHomesNi":  true,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
                              "price":  "Coming Soon",
@@ -7478,10 +7478,10 @@
                              "homesAvailable":  2,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
+                             "onHomesNi":  true,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£645,000 to £695,000",
+                             "price":  "Ã‚Â£645,000 to Ã‚Â£695,000",
                              "developers":  "PRH Construction NI Ltd",
                              "developerOrgs":  [
                                                    {
@@ -7520,7 +7520,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£275,000 to £280,000",
+                             "price":  "Ã‚Â£275,000 to Ã‚Â£280,000",
                              "developers":  "Kinstruct Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -7551,7 +7551,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/connor/149-1135899/16/",
                              "homesNiAgent":  false,
-                             "price":  "£239,950",
+                             "price":  "Ã‚Â£239,950",
                              "developers":  "Talis Construction Ltd",
                              "developerOrgs":  [
                                                    {
@@ -7582,7 +7582,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/newtownards/69-BNI250314/site-36---tr11/",
                              "homesNiAgent":  true,
-                             "price":  "£285,000 to £517,500",
+                             "price":  "Ã‚Â£285,000 to Ã‚Â£517,500",
                              "developers":  "McAlorum Group",
                              "developerOrgs":  [
                                                    {
@@ -7614,10 +7614,10 @@
                              "homesAvailable":  2,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
+                             "onHomesNi":  true,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£258,000",
+                             "price":  "Ã‚Â£258,000",
                              "developers":  "L and M McCabe Developments",
                              "developerOrgs":  [
                                                    {
@@ -7679,7 +7679,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/carnlough/39-HCLC1A10005908/62a-the-bay-fields/",
                              "homesNiAgent":  true,
-                             "price":  "£197,500 to £335,000",
+                             "price":  "Ã‚Â£197,500 to Ã‚Â£335,000",
                              "developers":  "Galgorm Properties",
                              "developerOrgs":  [
                                                    {
@@ -7710,7 +7710,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/doagh/69-GLE260322/site-183-the-beetlings/",
                              "homesNiAgent":  true,
-                             "price":  "£282,950",
+                             "price":  "Ã‚Â£282,950",
                              "developers":  "Antrim Construction Company Limited; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -7745,7 +7745,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£325,000",
+                             "price":  "Ã‚Â£325,000",
                              "developers":  "Piperhill Land",
                              "developerOrgs":  [
                                                    {
@@ -7780,7 +7780,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£515,000 to £520,950",
+                             "price":  "Ã‚Â£515,000 to Ã‚Â£520,950",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -7811,7 +7811,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/holywood-road/3-HLW240183/site-23/",
                              "homesNiAgent":  true,
-                             "price":  "£1,125,000",
+                             "price":  "Ã‚Â£1,125,000",
                              "developers":  "KAP Properties Limited / Cosy Group",
                              "developerOrgs":  [
                                                    {
@@ -7839,10 +7839,10 @@
                              "homesAvailable":  3,
                              "redundant":  false,
                              "hasMicrosite":  true,
-                             "onHomesNi":  false,
-                             "homesNiUrl":  "",
+                             "onHomesNi":  true,
+                             "homesNiUrl":  "https://homesni.com/property/woodbrook/3-LBR261564/",
                              "homesNiAgent":  true,
-                             "price":  "£170,000 to £304,950",
+                             "price":  "Ã‚Â£170,000 to Ã‚Â£304,950",
                              "developers":  "Lagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -7873,7 +7873,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/cultra/18-CNRCJBE3082/1-the-glen/",
                              "homesNiAgent":  true,
-                             "price":  "£950,000 to £1,050,000",
+                             "price":  "Ã‚Â£950,000 to Ã‚Â£1,050,000",
                              "developers":  "Andrew Dunlop Homes",
                              "developerOrgs":  [
                                                    {
@@ -7908,7 +7908,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/lurgan/62-19742728/the-joyce/",
                              "homesNiAgent":  true,
-                             "price":  "£230,000 to £345,000",
+                             "price":  "Ã‚Â£230,000 to Ã‚Â£345,000",
                              "developers":  "Hilmark Homes",
                              "developerOrgs":  [
                                                    {
@@ -7943,7 +7943,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/fivemiletown/104-977023/217/",
                              "homesNiAgent":  true,
-                             "price":  "£249,950",
+                             "price":  "Ã‚Â£249,950",
                              "developers":  "Rahoran Ltd",
                              "developerOrgs":  [
                                                    {
@@ -7986,7 +7986,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR260248/site-99-the-rosemary/",
                              "homesNiAgent":  true,
-                             "price":  "£305,000 to £400,000",
+                             "price":  "Ã‚Â£305,000 to Ã‚Â£400,000",
                              "developers":  "Braidwater",
                              "developerOrgs":  [
                                                    {
@@ -8017,7 +8017,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR261323/site-93-the-rosemary/",
                              "homesNiAgent":  true,
-                             "price":  "£495,000",
+                             "price":  "Ã‚Â£495,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -8048,7 +8048,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/dromore/13-TRLISTRL70000/the-oaks/",
                              "homesNiAgent":  true,
-                             "price":  "£229,950 to £295,000",
+                             "price":  "Ã‚Â£229,950 to Ã‚Â£295,000",
                              "developers":  "Ballygood Estates",
                              "developerOrgs":  [
                                                    {
@@ -8079,7 +8079,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/newcastle/13-TRLTRL102538/site-14-the-oaks/",
                              "homesNiAgent":  true,
-                             "price":  "£345,000",
+                             "price":  "Ã‚Â£345,000",
                              "developers":  "Clady Properties",
                              "developerOrgs":  [
                                                    {
@@ -8114,7 +8114,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£245,000",
+                             "price":  "Ã‚Â£245,000",
                              "developers":  "Creeve Construction Ltd",
                              "developerOrgs":  [
                                                    {
@@ -8145,7 +8145,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/enniskillen/104-1068299/1/",
                              "homesNiAgent":  true,
-                             "price":  "£334,995",
+                             "price":  "Ã‚Â£334,995",
                              "developers":  "View Point Developments; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -8184,7 +8184,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/enniskillen/104-1068299/1/",
                              "homesNiAgent":  true,
-                             "price":  "£229,950 to £253,950",
+                             "price":  "Ã‚Â£229,950 to Ã‚Â£253,950",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -8219,7 +8219,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/balmoral-(belfast)/3-LBR260764/apartment-3/",
                              "homesNiAgent":  true,
-                             "price":  "£395,000 to £560,000",
+                             "price":  "Ã‚Â£395,000 to Ã‚Â£560,000",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -8254,7 +8254,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/newmills,-dungannon/126-1045795/18/",
                              "homesNiAgent":  true,
-                             "price":  "£250,000",
+                             "price":  "Ã‚Â£250,000",
                              "developers":  "Firtree Developments",
                              "developerOrgs":  [
                                                    {
@@ -8286,10 +8286,10 @@
                              "homesAvailable":  3,
                              "redundant":  false,
                              "hasMicrosite":  false,
-                             "onHomesNi":  false,
+                             "onHomesNi":  true,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£220,000 to £400,000",
+                             "price":  "Ã‚Â£220,000 to Ã‚Â£400,000",
                              "developers":  "M \u0026 L Property Development Ltd",
                              "developerOrgs":  [
                                                    {
@@ -8324,7 +8324,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portadown/130-1100960/170-the-spires/",
                              "homesNiAgent":  true,
-                             "price":  "£340,000 to £355,000",
+                             "price":  "Ã‚Â£340,000 to Ã‚Â£355,000",
                              "developers":  "Arona Developments",
                              "developerOrgs":  [
                                                    {
@@ -8355,7 +8355,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/portstewart/18-CNRCJBE2992/3-the-valentine/",
                              "homesNiAgent":  true,
-                             "price":  "£240,000 to £300,000",
+                             "price":  "Ã‚Â£240,000 to Ã‚Â£300,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -8425,7 +8425,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£222,500",
+                             "price":  "Ã‚Â£222,500",
                              "developers":  "LS Construction Limited",
                              "developerOrgs":  [
                                                    {
@@ -8487,7 +8487,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£230,000 to £360,000",
+                             "price":  "Ã‚Â£230,000 to Ã‚Â£360,000",
                              "developers":  "Coleman Construction; Phone Number",
                              "developerOrgs":  [
                                                    {
@@ -8522,7 +8522,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/clogher/2-BAL19301/site-9-oak-tullybroom-heights/",
                              "homesNiAgent":  true,
-                             "price":  "£249,500 to £412,500",
+                             "price":  "Ã‚Â£249,500 to Ã‚Â£412,500",
                              "developers":  "Rahoran Ltd",
                              "developerOrgs":  [
                                                    {
@@ -8565,7 +8565,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£250,000",
+                             "price":  "Ã‚Â£250,000",
                              "developers":  "Conrad Developments",
                              "developerOrgs":  [
                                                    {
@@ -8596,7 +8596,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£335,000 to £420,000",
+                             "price":  "Ã‚Â£335,000 to Ã‚Â£420,000",
                              "developers":  "Multiple Developers",
                              "developerOrgs":  [
                                                    {
@@ -8627,7 +8627,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/greenisland/18-CNRCJBE3158/water-s-edge/",
                              "homesNiAgent":  true,
-                             "price":  "£295,000",
+                             "price":  "Ã‚Â£295,000",
                              "developers":  "Hagan Homes",
                              "developerOrgs":  [
                                                    {
@@ -8697,7 +8697,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/antrim/69-GLE260441/site-17-weavers-gate/",
                              "homesNiAgent":  true,
-                             "price":  "£174,950 to £344,950",
+                             "price":  "Ã‚Â£174,950 to Ã‚Â£344,950",
                              "developers":  "Lotus Homes",
                              "developerOrgs":  [
                                                    {
@@ -8732,7 +8732,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  true,
-                             "price":  "£210,000 to £220,000",
+                             "price":  "Ã‚Â£210,000 to Ã‚Â£220,000",
                              "developers":  "Private Developer",
                              "developerOrgs":  [
                                                    {
@@ -8763,7 +8763,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/ballywalter/1-18406180/apt-15-whitkirk-square/",
                              "homesNiAgent":  true,
-                             "price":  "£155,000 to £185,000",
+                             "price":  "Ã‚Â£155,000 to Ã‚Â£185,000",
                              "developers":  "Undisclosed Developer",
                              "developerOrgs":  [
                                                    {
@@ -8794,7 +8794,7 @@
                              "onHomesNi":  false,
                              "homesNiUrl":  "",
                              "homesNiAgent":  false,
-                             "price":  "£235,000 to £320,000",
+                             "price":  "Ã‚Â£235,000 to Ã‚Â£320,000",
                              "developers":  "Carey Developments Ltd",
                              "developerOrgs":  [
                                                    {
@@ -8829,7 +8829,7 @@
                              "onHomesNi":  true,
                              "homesNiUrl":  "https://homesni.com/property/comber/3-HLW250189/site-32/",
                              "homesNiAgent":  true,
-                             "price":  "£449,950 to £454,950",
+                             "price":  "Ã‚Â£449,950 to Ã‚Â£454,950",
                              "developers":  "Lotus Homes",
                              "developerOrgs":  [
                                                    {

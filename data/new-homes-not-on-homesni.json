@@ -1,0 +1,544 @@
+﻿{
+    "title":  "Development not on HomesNI",
+    "updated":  "2026-11-26",
+    "note":  "Manual yes/no pass on the pre-fine-tooth 79-candidate list.",
+    "totalDevelopments":  269,
+    "onHomesNi":  213,
+    "notOnHomesNi":  56,
+    "candidatePassYes":  23,
+    "candidatePassNo":  56,
+    "notOnFromThisPass":  [
+                              {
+                                  "pathId":  "d3483",
+                                  "name":  "Abbey Grange",
+                                  "town":  "portglenone",
+                                  "agents":  "PRH Residential",
+                                  "url":  "https://www.propertypal.com/d3483"
+                              },
+                              {
+                                  "pathId":  "d3465",
+                                  "name":  "Ashley Hill",
+                                  "town":  "bt60",
+                                  "agents":  "Property Link Estate Agents (Armagh)",
+                                  "url":  "https://www.propertypal.com/d3465"
+                              },
+                              {
+                                  "pathId":  "d3954",
+                                  "name":  "Ballynery Meadows",
+                                  "town":  "lurgan",
+                                  "agents":  "Glass Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3954"
+                              },
+                              {
+                                  "pathId":  "d3711",
+                                  "name":  "Benmore Gate",
+                                  "town":  "ballycastle",
+                                  "agents":  "Frank A McCaughan \u0026 Son",
+                                  "url":  "https://www.propertypal.com/d3711"
+                              },
+                              {
+                                  "pathId":  "d3670",
+                                  "name":  "Carrolls Wood",
+                                  "town":  "armagh",
+                                  "agents":  "Property Link Estate Agents (Armagh)",
+                                  "url":  "https://www.propertypal.com/d3670"
+                              },
+                              {
+                                  "pathId":  "d3931",
+                                  "name":  "Castle Drive",
+                                  "town":  "newry",
+                                  "agents":  "Best Property Services (Newry)",
+                                  "url":  "https://www.propertypal.com/d3931"
+                              },
+                              {
+                                  "pathId":  "d3866",
+                                  "name":  "Castlebrook Meadows",
+                                  "town":  "antrim",
+                                  "agents":  "Country Estates (Antrim)",
+                                  "url":  "https://www.propertypal.com/d3866"
+                              },
+                              {
+                                  "pathId":  "d3723",
+                                  "name":  "Cherrydene.",
+                                  "town":  "derry",
+                                  "agents":  "Pauline Elliott Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3723"
+                              },
+                              {
+                                  "pathId":  "d3936",
+                                  "name":  "Chestnut Manor",
+                                  "town":  "bt41",
+                                  "agents":  "Blair \u0026 Boyd",
+                                  "url":  "https://www.propertypal.com/d3936"
+                              },
+                              {
+                                  "pathId":  "d3508",
+                                  "name":  "Chichester Park",
+                                  "town":  "bt41",
+                                  "agents":  "Country Estates (Antrim)",
+                                  "url":  "https://www.propertypal.com/d3508"
+                              },
+                              {
+                                  "pathId":  "d3944",
+                                  "name":  "Damolly Lane",
+                                  "town":  "bt34",
+                                  "agents":  "Morgan Property Services",
+                                  "url":  "https://www.propertypal.com/d3944"
+                              },
+                              {
+                                  "pathId":  "d3669",
+                                  "name":  "Dawson Hall",
+                                  "town":  "ardglass",
+                                  "agents":  "Colliers New Homes",
+                                  "url":  "https://www.propertypal.com/d3669"
+                              },
+                              {
+                                  "pathId":  "d3698",
+                                  "name":  "Derrianna",
+                                  "town":  "bt48",
+                                  "agents":  "Pauline Elliott Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3698"
+                              },
+                              {
+                                  "pathId":  "d3377",
+                                  "name":  "Eden Avenue",
+                                  "town":  "bt35",
+                                  "agents":  "Best Property Services (Newry)",
+                                  "url":  "https://www.propertypal.com/d3377"
+                              },
+                              {
+                                  "pathId":  "d3877",
+                                  "name":  "Fairview Farm Close",
+                                  "town":  "bt39",
+                                  "agents":  "Sentry NI; Abbey Real Estate (Ballyclare)",
+                                  "url":  "https://www.propertypal.com/d3877"
+                              },
+                              {
+                                  "pathId":  "d3956",
+                                  "name":  "Fairway Drive",
+                                  "town":  "bt27",
+                                  "agents":  "Fetherstons (South Belfast Office)",
+                                  "url":  "https://www.propertypal.com/d3956"
+                              },
+                              {
+                                  "pathId":  "d3785",
+                                  "name":  "Foxwood Manor",
+                                  "town":  "bt66",
+                                  "agents":  "Jones Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3785"
+                              },
+                              {
+                                  "pathId":  "d3479",
+                                  "name":  "Franklyn Gardens",
+                                  "town":  "lurgan",
+                                  "agents":  "Jones Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3479"
+                              },
+                              {
+                                  "pathId":  "d2707",
+                                  "name":  "Hillcroft",
+                                  "town":  "bt63",
+                                  "agents":  "Wilson Residential; Stevenson \u0026 Cumming (Portadown) Ltd",
+                                  "url":  "https://www.propertypal.com/d2707"
+                              },
+                              {
+                                  "pathId":  "d3873",
+                                  "name":  "Hugh\u0027s Quarter",
+                                  "town":  "bt8",
+                                  "agents":  "Roxborough Residential",
+                                  "url":  "https://www.propertypal.com/d3873"
+                              },
+                              {
+                                  "pathId":  "d1050",
+                                  "name":  "Hunters Lodge",
+                                  "town":  "bt66",
+                                  "agents":  "Kingham Property Specialists",
+                                  "url":  "https://www.propertypal.com/d1050"
+                              },
+                              {
+                                  "pathId":  "d3152",
+                                  "name":  "Killycush Court",
+                                  "town":  "dungannon",
+                                  "agents":  "Baird Real Estate",
+                                  "url":  "https://www.propertypal.com/d3152"
+                              },
+                              {
+                                  "pathId":  "d3855",
+                                  "name":  "Kingsfort Mews",
+                                  "town":  "newtownabbey",
+                                  "agents":  "Country Estates (Ballyclare)",
+                                  "url":  "https://www.propertypal.com/d3855"
+                              },
+                              {
+                                  "pathId":  "d3007",
+                                  "name":  "Kyle Mews",
+                                  "town":  "bt15",
+                                  "agents":  "Ulster Property Sales (Cavehill)",
+                                  "url":  "https://www.propertypal.com/d3007"
+                              },
+                              {
+                                  "pathId":  "d3134",
+                                  "name":  "Lurgyroe Glen",
+                                  "town":  "bt71",
+                                  "agents":  "Roxborough Residential",
+                                  "url":  "https://www.propertypal.com/d3134"
+                              },
+                              {
+                                  "pathId":  "d3851",
+                                  "name":  "Mahon Meadows",
+                                  "town":  "portadown",
+                                  "agents":  "MSR Estate Agents (Lurgan)",
+                                  "url":  "https://www.propertypal.com/d3851"
+                              },
+                              {
+                                  "pathId":  "d3889",
+                                  "name":  "Mariners Park",
+                                  "town":  "downpatrick",
+                                  "agents":  "Peter Fitzpatrick and Sons",
+                                  "url":  "https://www.propertypal.com/d3889"
+                              },
+                              {
+                                  "pathId":  "d3959",
+                                  "name":  "Maydown Meadows",
+                                  "town":  "dungannon",
+                                  "agents":  "Baird Real Estate",
+                                  "url":  "https://www.propertypal.com/d3959"
+                              },
+                              {
+                                  "pathId":  "d2907",
+                                  "name":  "Meadowvale",
+                                  "town":  "bt35",
+                                  "agents":  "Real Deal Property Services; Hanna Hillen",
+                                  "url":  "https://www.propertypal.com/d2907"
+                              },
+                              {
+                                  "pathId":  "d3816",
+                                  "name":  "Mill Bank Park",
+                                  "town":  "limavady",
+                                  "agents":  "Daniel Henry",
+                                  "url":  "https://www.propertypal.com/d3816"
+                              },
+                              {
+                                  "pathId":  "d3870",
+                                  "name":  "Mill House Lane",
+                                  "town":  "strabane",
+                                  "agents":  "Harte McGarrigle",
+                                  "url":  "https://www.propertypal.com/d3870"
+                              },
+                              {
+                                  "pathId":  "d2956",
+                                  "name":  "Mill Pond Manor",
+                                  "town":  "aughnacloy",
+                                  "agents":  "Baird Real Estate",
+                                  "url":  "https://www.propertypal.com/d2956"
+                              },
+                              {
+                                  "pathId":  "d3258",
+                                  "name":  "Moss Lane",
+                                  "town":  "bt66",
+                                  "agents":  "Jones Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3258"
+                              },
+                              {
+                                  "pathId":  "d2159",
+                                  "name":  "Mulcreevy View",
+                                  "town":  "bt60",
+                                  "agents":  "Mallon Property Sales",
+                                  "url":  "https://www.propertypal.com/d2159"
+                              },
+                              {
+                                  "pathId":  "d3906",
+                                  "name":  "NEW DEVELOPMENT",
+                                  "town":  "bt34",
+                                  "agents":  "Relocate",
+                                  "url":  "https://www.propertypal.com/d3906"
+                              },
+                              {
+                                  "pathId":  "d3839",
+                                  "name":  "Old Quarry Manor",
+                                  "town":  "armagh",
+                                  "agents":  "Property Link Estate Agents (Armagh)",
+                                  "url":  "https://www.propertypal.com/d3839"
+                              },
+                              {
+                                  "pathId":  "d3846",
+                                  "name":  "Primrose Hill",
+                                  "town":  "bt63",
+                                  "agents":  "Wilson Residential; Stevenson \u0026 Cumming (Portadown) Ltd",
+                                  "url":  "https://www.propertypal.com/d3846"
+                              },
+                              {
+                                  "pathId":  "d3876",
+                                  "name":  "Riverside Mill",
+                                  "town":  "bt67",
+                                  "agents":  "Kingham Property Specialists",
+                                  "url":  "https://www.propertypal.com/d3876"
+                              },
+                              {
+                                  "pathId":  "d3951",
+                                  "name":  "Roes Rock",
+                                  "town":  "magherafelt",
+                                  "agents":  "Paul Birt",
+                                  "url":  "https://www.propertypal.com/d3951"
+                              },
+                              {
+                                  "pathId":  "d3743",
+                                  "name":  "Roswinny",
+                                  "town":  "bt93",
+                                  "agents":  "Eadie McFarland \u0026 Co",
+                                  "url":  "https://www.propertypal.com/d3743"
+                              },
+                              {
+                                  "pathId":  "d3972",
+                                  "name":  "Saul Manor",
+                                  "town":  "claudy",
+                                  "agents":  "Homepage Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3972"
+                              },
+                              {
+                                  "pathId":  "d3928",
+                                  "name":  "Seahaven Residential",
+                                  "town":  "bt19",
+                                  "agents":  "George Graham \u0026 Sons",
+                                  "url":  "https://www.propertypal.com/d3928"
+                              },
+                              {
+                                  "pathId":  "d3882",
+                                  "name":  "Station Drive",
+                                  "town":  "moneymore",
+                                  "agents":  "Baird Real Estate",
+                                  "url":  "https://www.propertypal.com/d3882"
+                              },
+                              {
+                                  "pathId":  "d3916",
+                                  "name":  "Stoney Brea Meadow",
+                                  "town":  "keady",
+                                  "agents":  "Peter Cullen \u0026 Son",
+                                  "url":  "https://www.propertypal.com/d3916"
+                              },
+                              {
+                                  "pathId":  "d3960",
+                                  "name":  "Sunnybank",
+                                  "town":  "islandmagee",
+                                  "agents":  "Balmoral Estates",
+                                  "url":  "https://www.propertypal.com/d3960"
+                              },
+                              {
+                                  "pathId":  "d3949",
+                                  "name":  "The Bank Apartments",
+                                  "town":  "belfast",
+                                  "agents":  "Simon Brien (Lisburn Road)",
+                                  "url":  "https://www.propertypal.com/d3949"
+                              },
+                              {
+                                  "pathId":  "d3775",
+                                  "name":  "The Crescent at Tarry Wood",
+                                  "town":  "bt67",
+                                  "agents":  "Kingham Property Specialists; Stewart Estate Agents",
+                                  "url":  "https://www.propertypal.com/d3775"
+                              },
+                              {
+                                  "pathId":  "d3755",
+                                  "name":  "The Demesne Country Estate",
+                                  "town":  "bt67",
+                                  "agents":  "Kingham Property Specialists",
+                                  "url":  "https://www.propertypal.com/d3755"
+                              },
+                              {
+                                  "pathId":  "d3934",
+                                  "name":  "The Orchard",
+                                  "town":  "toomebridge",
+                                  "agents":  "Mayfair \u0026 Morgan",
+                                  "url":  "https://www.propertypal.com/d3934"
+                              },
+                              {
+                                  "pathId":  "d3965",
+                                  "name":  "Thornhill Manor",
+                                  "town":  "tandragee",
+                                  "agents":  "Property Link Estate Agents (Armagh)",
+                                  "url":  "https://www.propertypal.com/d3965"
+                              },
+                              {
+                                  "pathId":  "d3958",
+                                  "name":  "Tirquin Meadows",
+                                  "town":  "omagh",
+                                  "agents":  "O\u0027Kane Bros",
+                                  "url":  "https://www.propertypal.com/d3958"
+                              },
+                              {
+                                  "pathId":  "d3759",
+                                  "name":  "Tullydale Drive",
+                                  "town":  "bt34",
+                                  "agents":  "A \u0026 M Haughian Ltd",
+                                  "url":  "https://www.propertypal.com/d3759"
+                              },
+                              {
+                                  "pathId":  "d3946",
+                                  "name":  "Upper Burren Lane",
+                                  "town":  "bt34",
+                                  "agents":  "Assure Move NI",
+                                  "url":  "https://www.propertypal.com/d3946"
+                              },
+                              {
+                                  "pathId":  "d3813",
+                                  "name":  "Watsons Fort",
+                                  "town":  "newry",
+                                  "agents":  "Best Property Services (Newry); Digney Boyd",
+                                  "url":  "https://www.propertypal.com/d3813"
+                              },
+                              {
+                                  "pathId":  "d3818",
+                                  "name":  "West Street Court",
+                                  "town":  "stewartstown",
+                                  "agents":  "Baird Real Estate",
+                                  "url":  "https://www.propertypal.com/d3818"
+                              },
+                              {
+                                  "pathId":  "d3812",
+                                  "name":  "Wispy Hill",
+                                  "town":  "bt78",
+                                  "agents":  "McAtee Bros; Kelly Sales",
+                                  "url":  "https://www.propertypal.com/d3812"
+                              }
+                          ],
+    "yesFromThisPass":  [
+                            {
+                                "n":  1,
+                                "pathId":  "d3905",
+                                "name":  "100/100A Victoria Gate",
+                                "homesNiUrl":  ""
+                            },
+                            {
+                                "n":  3,
+                                "pathId":  "d3356",
+                                "name":  "Ardavon House Apartments",
+                                "homesNiUrl":  "https://homesni.com/property/cultra/18-CNRCJBE2849/"
+                            },
+                            {
+                                "n":  4,
+                                "pathId":  "d3369",
+                                "name":  "Ashdale Close",
+                                "homesNiUrl":  "https://homesni.com/property/portadown/130-1089412/"
+                            },
+                            {
+                                "n":  6,
+                                "pathId":  "d3563",
+                                "name":  "Ballynamoney View",
+                                "homesNiUrl":  "https://homesni.com/property/craigavon/62-19304734/"
+                            },
+                            {
+                                "n":  12,
+                                "pathId":  "d3088",
+                                "name":  "Charlestown Hall - Lagan Homes",
+                                "homesNiUrl":  "https://homesni.com/property/lisburn-city-centre/3-LBR260727/"
+                            },
+                            {
+                                "n":  19,
+                                "pathId":  "d3848",
+                                "name":  "Drew\u0027s Glen",
+                                "homesNiUrl":  "https://homesni.com/property/antrim-town/3-LBR260779/"
+                            },
+                            {
+                                "n":  23,
+                                "pathId":  "d3964",
+                                "name":  "Flaxfield",
+                                "homesNiUrl":  "https://homesni.com/property/doagh/69-GLE260797/"
+                            },
+                            {
+                                "n":  26,
+                                "pathId":  "d3622",
+                                "name":  "Glencombe Wood",
+                                "homesNiUrl":  "https://homesni.com/property/ballymena/125-PAUB674058/"
+                            },
+                            {
+                                "n":  27,
+                                "pathId":  "d3847",
+                                "name":  "Greenshield View",
+                                "homesNiUrl":  "https://homesni.com/property/ballymoney/80-1088502/"
+                            },
+                            {
+                                "n":  28,
+                                "pathId":  "d3524",
+                                "name":  "Hampshire Hall",
+                                "homesNiUrl":  "https://homesni.com/property/carrickfergus/69-CAR260494/"
+                            },
+                            {
+                                "n":  35,
+                                "pathId":  "d3092",
+                                "name":  "Lilburn Hall Manor",
+                                "homesNiUrl":  "https://homesni.com/property/craigavon/135-18850118/"
+                            },
+                            {
+                                "n":  36,
+                                "pathId":  "d1741",
+                                "name":  "Longridge \u0026 The Hollows Manor",
+                                "homesNiUrl":  "https://homesni.com/property/lurgan/62-19004416/"
+                            },
+                            {
+                                "n":  42,
+                                "pathId":  "d3443",
+                                "name":  "Mealough, Mealough Road",
+                                "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR261149/"
+                            },
+                            {
+                                "n":  43,
+                                "pathId":  "d3929",
+                                "name":  "Merchants Mews",
+                                "homesNiUrl":  ""
+                            },
+                            {
+                                "n":  47,
+                                "pathId":  "d3864",
+                                "name":  "Millreagh",
+                                "homesNiUrl":  "https://homesni.com/property/dundonald/69-BAL260106/"
+                            },
+                            {
+                                "n":  49,
+                                "pathId":  "d3660",
+                                "name":  "Mount Ober",
+                                "homesNiUrl":  "https://homesni.com/property/carryduff/3-LBR260551/"
+                            },
+                            {
+                                "n":  52,
+                                "pathId":  "d3096",
+                                "name":  "Newtownsaville Development",
+                                "homesNiUrl":  "https://homesni.com/property/omagh-area/95-200028/"
+                            },
+                            {
+                                "n":  61,
+                                "pathId":  "d3968",
+                                "name":  "Stonebridge Lane",
+                                "homesNiUrl":  "https://homesni.com/property/mallusk/69-GLE260807/"
+                            },
+                            {
+                                "n":  63,
+                                "pathId":  "d3927",
+                                "name":  "Strand 55",
+                                "homesNiUrl":  ""
+                            },
+                            {
+                                "n":  64,
+                                "pathId":  "d3688",
+                                "name":  "Strand Road, Portstewart",
+                                "homesNiUrl":  ""
+                            },
+                            {
+                                "n":  66,
+                                "pathId":  "d3953",
+                                "name":  "Teemore Road Development",
+                                "homesNiUrl":  ""
+                            },
+                            {
+                                "n":  70,
+                                "pathId":  "d3603",
+                                "name":  "The Galloway At Woodbrook",
+                                "homesNiUrl":  "https://homesni.com/property/woodbrook/3-LBR261564/"
+                            },
+                            {
+                                "n":  72,
+                                "pathId":  "d2889",
+                                "name":  "The Spires",
+                                "homesNiUrl":  ""
+                            }
+                        ]
+}

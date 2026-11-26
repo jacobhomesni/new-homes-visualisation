@@ -80,20 +80,22 @@
   function markerIcon(dev) {
     const redundant = !!(dev && dev.redundant);
     const microsite = !!(dev && dev.hasMicrosite);
-    const onHomesNi = !!(dev && dev.onHomesNi);
-    // Redundant red → microsite gold → on HomesNI blue → live green.
+    const notOnHomesNiFilter = !!(els.filterHomesNi && els.filterHomesNi.checked);
+    const notOnHomesNi = !(dev && dev.onHomesNi);
+    // Default: redundant red → microsite gold → live green.
+    // Development not on HomesNI filter on: those pins get blue.
     let color = '#1f7a4c';
     let extraClass = '';
     let glow = '0 2px 6px rgba(10,30,18,.45), 0 1px 0 rgba(255,255,255,.35) inset';
     if (redundant) {
       color = '#a13d2d';
-    } else if (microsite) {
-      color = '#c9a227';
-      extraClass = ' dev-marker-microsite';
-    } else if (onHomesNi) {
+    } else if (notOnHomesNiFilter && notOnHomesNi) {
       color = '#1f50b3';
       extraClass = ' dev-marker-homesni';
       glow = '0 0 10px rgba(31,80,179,.75), 0 0 18px rgba(31,80,179,.45), 0 2px 6px rgba(10,30,18,.35), 0 1px 0 rgba(255,255,255,.35) inset';
+    } else if (microsite) {
+      color = '#c9a227';
+      extraClass = ' dev-marker-microsite';
     }
     const size = isMobile() ? 10 : 14;
     const half = size / 2;
@@ -199,15 +201,11 @@
     const status = d.status || (d.redundant ? 'Sale agreed / redundant' : 'Available');
     const developerCards = orgCards(d.developerOrgs, d.developers || 'Developer n/a');
     const agentCards = orgCards(d.agentOrgs, d.agents || 'Agent n/a');
-    const homesNiLink = d.onHomesNi && d.homesNiUrl
-      ? `<p><a href="${escapeAttr(d.homesNiUrl)}" target="_blank" rel="noopener">View on HomesNI</a></p>`
-      : (d.onHomesNi ? '<p>On HomesNI</p>' : '');
     return `<div class="popup">
       <h3>${escapeHtml(d.name)}</h3>
       <p>${escapeHtml(d.address || '')}</p>
       <p><strong>${escapeHtml(String(homes))}</strong> homes available · ${escapeHtml(d.price || 'Price n/a')}</p>
       <p>${escapeHtml(status)}</p>
-      ${homesNiLink}
       <p class="org-label">Developer</p>
       ${developerCards || '<div class="org-row"><div class="org-card"><span class="org-name">Developer n/a</span></div></div>'}
       <p class="org-label">Agent</p>
